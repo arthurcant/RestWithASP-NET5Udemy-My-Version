@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace RestWithASPNETUdemy.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[[Calculator]]")]
     public class CalculatorController : ControllerBase
     {
         private readonly ILogger<CalculatorController> _logger;
