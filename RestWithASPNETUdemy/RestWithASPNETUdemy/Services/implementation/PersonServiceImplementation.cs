@@ -9,6 +9,7 @@ namespace RestWithASPNETUdemy.Services.implementation
 {
     public class PersonServiceImplementation : IPersonService
     {
+        public volatile int count;
         List<Person> people = new List<Person>();
 
         public Person Create(Person person)
@@ -27,16 +28,21 @@ namespace RestWithASPNETUdemy.Services.implementation
             return people;
         }
 
-        public Person FindById()
+        public Person FindById(long id)
         {
-            return new Person {
-                id:,
+            return new Person 
+            {
+                Id: IncrementAndGet(id),
                 FirstName: "Arthur",
                 LastName: "Cavalcante",
                 Address: "Prazeres Pernambuco Brazil",
-                Gender: ()
+                Gender: "Masculino"
+            };
+        }
 
-            }
+        private object IncrementAndGet(int count)
+        {
+            Interlocked.Increment(out count);
         }
 
         public Person update(Person person)
