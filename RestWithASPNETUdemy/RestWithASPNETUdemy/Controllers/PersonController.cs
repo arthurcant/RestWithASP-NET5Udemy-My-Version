@@ -4,56 +4,68 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RestWithASPNETUdemy.Model;
+using RestWithASPNETUdemy.Services;
 
 namespace RestWithASPNETUdemy.Controllers
 {
+    //https://localhost:5002/api/person/
     [ApiController]
-    [Route("[[Person]]")]
+    [Route("api/[controller]")]
     public class PersonController : ControllerBase
     {
         private readonly ILogger<PersonController> _logger;
-
-        public PersonController(ILogger<PersonController> logger)
+        private IPersonService _personService;
+        public PersonController(ILogger<PersonController> logger, IPersonService personService)
         {
             _logger = logger;
+            _personService = personService;
         }
 
-        [HttpGet("/{msg}")]
-        public IActionResult Get(string msg){
-            return Ok(msg);
-        }
-
-        [HttpGet("sum/{firstNumber}/{secondNumber}")] // The path/router that go to be send to here.
-        public IActionResult Get(string firstNumber, string secondNumber)
+        [HttpGet]
+        public IActionResult Get()
         {
-            if(IsNumeric(firstNumber) && IsNumeric(secondNumber)) 
-            {
-                var sum = ConvertToDecimal(firstNumber) + ConvertToDecimal(secondNumber); 
-                return Ok(sum.ToString());
-            }
-
-            return BadRequest("Invalid Input.");
-        }
-        private bool IsNumeric(string strNumber)
-        {
-            double number;
-            bool isNumber = double.TryParse(
-                strNumber,
-                System.Globalization.NumberStyles.Any,
-                System.Globalization.NumberFormatInfo.InvariantInfo,
-                out number);
-            return isNumber;
+            return Ok(_personService.FindAll());
         }
 
-        private decimal ConvertToDecimal(string strNumber)
+        [HttpGet("{id}")]
+        public IActionResult Get(long id)
         {
-            decimal decimalValue;
-            if(decimal.TryParse(strNumber, out decimalValue))
-            {
-                return decimalValue;
-            }
-            return 0;
+            var person = _personService.FindByID(id);
+            if(person == null) return NotFound();
+            return Ok(person);
         }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] Person person)
+        {
+            if(person == null) return BadRequest();
+            return Ok(_personService.Create(person));
+        }
+
+        [HttpPut]
+        public IActionResult Put([FromBody] Person person){
+            if(person == null) return BadRequest();
+            return Ok(_personService.Update(person));
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(long id)
+        {
+            _personService.Delete(id);
+            return NoContent();
+        }
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
