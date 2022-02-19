@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Expressions;
 using RestWithASPNETUdemy.Model;
 
 namespace RestWithASPNETUdemy.Services.implementation
@@ -10,61 +12,85 @@ namespace RestWithASPNETUdemy.Services.implementation
     public class PersonServiceImplementation : IPersonService
     {
         private volatile int count;
+        private int listImplement = 0;
+        List<Person> people = new List<Person>();
 
-        Person IPersonService.Create(Person person)
+        public Person Create(Person person)
         {
+            person.Id = IncrementAndGet();
+            people.Add(person);
             return person;
         }
 
-        void IPersonService.Delete(long id)
+        public void Delete(int id)
         {
-
+            people.RemoveAt(id);
         }
 
-        List<Person> IPersonService.FindAll()
+        public List<Person> FindAll()
         {
-            List<Person> peoples = new List<Person>();
-
-            for(int i = 0; i < 8; i++){
-                Person person = MockPerson(i);
-                peoples.Add(person);
+            if(listImplement == 0){ 
+                for(int i = 0; i < 8; ++i){
+                    Person person = mockPerson(i);
+                    people.Add(person);
+                }
+                listImplement++;
             }
-            return peoples;
+            return people;
         }
 
-
-        Person IPersonService.FindByID(long id)
+        private Person mockPerson(int i)
         {
             return new Person 
             {
-                id = IncrementAndGet(),
-                FirstName = "Leandro",
-                LastName = "Costa",
-                Address = "Uberlandia - Minas Gerais - Brasil",
-                Gender = "Male"
+                Id = IncrementAndGet(),
+                FirstName = "Arthur" + i,
+                LastName = "Cavalcante" + i,
+                Address = "Prazeres Pernambuco Brazil" + i,
+                Gender = "Masculino" + i
             };
         }
 
-        Person IPersonService.Update(Person person)
+        public Person FindById(long id)
         {
-            throw new NotImplementedException();
-        }
-        private Person MockPerson(int i)
-        {
-            return new Person 
-            {
-                id = IncrementAndGet(),
-                FirstName = "Person Name" + i,
-                LastName = "Person LastName" + i,
-                Address = "Some Address" + i,
-                Gender = (i % 2 != 0) ?"Female":"Male"
-            };
+            // long saveNum = id;
+            // int x = Convert.ToInt32(id);
+            bool verifying = false;
+            int saveNum = checked((int) id);
+
+            verifying = verifyingPerson(id);
+
+            if(verifying == true) {
+                return people[saveNum];
+            }
+            
+            return people[saveNum];
+            
         }
 
+        private bool verifyingPerson(long saveNum)
+        {
+            bool x = false;
+
+            if(people.Any(l => l.Id == saveNum)) {
+                x = true;
+            }
+
+            return x;
+        }
+
+        public Person update(Person person, int id)
+        {
+            people[id].FirstName = person.FirstName;
+            people[id].LastName = person.LastName;
+            people[id].Address = person.Address;
+            people[id].Gender = person.Gender;
+
+            return people[id];
+        }
         private long IncrementAndGet()
         {
             return Interlocked.Increment(ref count);
         }
-        
     }
 }
