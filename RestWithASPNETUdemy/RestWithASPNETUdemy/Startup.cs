@@ -32,7 +32,7 @@ namespace RestWithASPNETUdemy
             services.AddControllers();
 
             // Dependency Injection 
-            // services.AddScoped<>();
+            services.AddScoped<IPersonService, PersonServiceImplementation>();
 
             services.AddSwaggerGen(c =>
             {

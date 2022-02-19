@@ -31,7 +31,7 @@ namespace RestWithASPNETUdemy.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(long id)
         {
-            var person = _personService.FindByID(id);
+            Person person = _personService.FindById(id);
             if(person == null) return NotFound();
             return Ok(person);
         }
@@ -40,17 +40,18 @@ namespace RestWithASPNETUdemy.Controllers
         public IActionResult Post([FromBody] Person person)
         {
             if(person == null) return BadRequest();
+
             return Ok(_personService.Create(person));
         }
 
-        [HttpPut]
-        public IActionResult Put([FromBody] Person person){
+        [HttpPut("{id}")]
+        public IActionResult Put([FromBody] Person person, int id){
             if(person == null) return BadRequest();
-            return Ok(_personService.Update(person));
+            return Ok(_personService.update(person, id));
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(long id)
+        public IActionResult Delete(int id)
         {
             _personService.Delete(id);
             return NoContent();

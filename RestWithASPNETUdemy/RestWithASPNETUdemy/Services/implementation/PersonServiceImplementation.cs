@@ -12,7 +12,7 @@ namespace RestWithASPNETUdemy.Services.implementation
     public class PersonServiceImplementation : IPersonService
     {
         private volatile int count;
-        private bool listImplement = false;
+        private int listImplement = 0;
         List<Person> people = new List<Person>();
 
         public Person Create(Person person)
@@ -22,19 +22,19 @@ namespace RestWithASPNETUdemy.Services.implementation
             return person;
         }
 
-        public void Delete()
+        public void Delete(int id)
         {
-            
+            people.RemoveAt(id);
         }
 
         public List<Person> FindAll()
         {
-            if(listImplement == false){
-                for(int i = 0; i < 11; i++){
+            if(listImplement == 0){ 
+                for(int i = 0; i < 8; ++i){
                     Person person = mockPerson(i);
                     people.Add(person);
                 }
-                listImplement = true;
+                listImplement++;
             }
             return people;
         }
@@ -56,13 +56,14 @@ namespace RestWithASPNETUdemy.Services.implementation
             // long saveNum = id;
             // int x = Convert.ToInt32(id);
             bool verifying = false;
-            int saveNum = unchecked((int) id);
+            int saveNum = checked((int) id);
 
             verifying = verifyingPerson(id);
 
             if(verifying == true) {
                 return people[saveNum];
             }
+            
             return people[saveNum];
             
         }
@@ -91,6 +92,5 @@ namespace RestWithASPNETUdemy.Services.implementation
         {
             return Interlocked.Increment(ref count);
         }
-
     }
 }
