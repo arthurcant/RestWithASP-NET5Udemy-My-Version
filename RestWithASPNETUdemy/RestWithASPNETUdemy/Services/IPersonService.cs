@@ -1,5 +1,5 @@
+﻿using RestWithASPNETUdemy.Model;
 using System.Collections.Generic;
-using RestWithASPNETUdemy.Model;
 
 namespace RestWithASPNETUdemy.Services
 {
@@ -10,6 +10,5 @@ namespace RestWithASPNETUdemy.Services
         List<Person> FindAll();
         Person Update(Person person);
         void Delete(long id);
-
     }
 }
