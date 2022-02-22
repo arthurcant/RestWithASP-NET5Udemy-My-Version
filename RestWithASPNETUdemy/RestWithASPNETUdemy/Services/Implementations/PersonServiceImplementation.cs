@@ -1,6 +1,7 @@
-﻿using RestWithASPNETUdemy.Model;
-using System.Collections.Generic;
-using System.Threading;
+﻿using System.Collections.Generic;
+using System.Linq;
+using RestWithASPNETUdemy.Model;
+using RestWithASPNETUdemy.Model.Context;
 
 namespace RestWithASPNETUdemy.Services.Implementations
 {
@@ -9,6 +10,14 @@ namespace RestWithASPNETUdemy.Services.Implementations
         // Counter responsible for generating a fake ID
         // since we are not accessing any database
         private volatile int count;
+
+        private MySQLContext _context;
+
+        public PersonServiceImplementation(MySQLContext context)
+        {
+            _context = context;
+        }
+
 
         // Method responsible for creating a new person.
         // If we had a database this would be the time to persist the data
@@ -27,13 +36,7 @@ namespace RestWithASPNETUdemy.Services.Implementations
         // again this information is mocks
         public List<Person> FindAll()
         {
-            List<Person> persons = new List<Person>();
-            for (int i = 0; i < 8; i++)
-            {
-                Person person = MockPerson(i);
-                persons.Add(person);
-            }
-            return persons;
+            return _context.People.ToList();
         }
 
         // Method responsible for returning a person
@@ -42,7 +45,7 @@ namespace RestWithASPNETUdemy.Services.Implementations
         {
             return new Person
             {
-                Id = IncrementAndGet(),
+                Id = 1,
                 FirstName = "Leandro",
                 LastName = "Costa",
                 Address = "Uberlandia - Minas Gerais - Brasil",
@@ -57,21 +60,7 @@ namespace RestWithASPNETUdemy.Services.Implementations
             return person;
         }
 
-        private Person MockPerson(int i)
-        {
-            return new Person
-            {
-                Id = IncrementAndGet(),
-                FirstName = "Person Name" + i,
-                LastName = "Person LastName" + i,
-                Address = "Some Address" + i,
-                Gender = "Male"
-            };
-        }
-
-        private long IncrementAndGet()
-        {
-            return Interlocked.Increment(ref count);
-        }
+        
+        
     }
 }

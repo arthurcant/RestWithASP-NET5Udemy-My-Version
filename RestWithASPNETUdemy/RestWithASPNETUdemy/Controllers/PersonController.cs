@@ -2,11 +2,12 @@
 using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Services;
+using RestWithASPNETUdemy.Model.Context;
 
 namespace RestWithASPNETUdemy.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/person")]
     public class PersonController : ControllerBase
     {
 
@@ -15,8 +16,6 @@ namespace RestWithASPNETUdemy.Controllers
         // Declaration of the service used
         private IPersonService _personService;
 
-        // Injection of an instance of IPersonService
-        // when creating an instance of PersonController
         public PersonController(ILogger<PersonController> logger, IPersonService personService)
         {
             _logger = logger;
