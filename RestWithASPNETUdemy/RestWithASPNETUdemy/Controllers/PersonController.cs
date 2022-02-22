@@ -1,72 +1,72 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Services;
+using RestWithASPNETUdemy.Model.Context;
+
 
 namespace RestWithASPNETUdemy.Controllers
 {
-    //https://localhost:5002/api/person/
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/person")]
     public class PersonController : ControllerBase
     {
+
         private readonly ILogger<PersonController> _logger;
+
+        // Declaration of the service used
         private IPersonService _personService;
+
         public PersonController(ILogger<PersonController> logger, IPersonService personService)
         {
             _logger = logger;
             _personService = personService;
         }
 
+        // Maps GET requests to https://localhost:{port}/api/person
+        // Get no parameters for FindAll -> Search All
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_personService.FindAll());
         }
 
+        // Maps GET requests to https://localhost:{port}/api/person/{id}
+        // receiving an ID as in the Request Path
+        // Get with parameters for FindById -> Search by ID
         [HttpGet("{id}")]
         public IActionResult Get(long id)
         {
-            Person person = _personService.FindById(id);
-            if(person == null) return NotFound();
+            var person = _personService.FindByID(id);
+            if (person == null) return NotFound();
             return Ok(person);
         }
 
+        // Maps POST requests to https://localhost:{port}/api/person/
+        // [FromBody] consumes the JSON object sent in the request body
         [HttpPost]
         public IActionResult Post([FromBody] Person person)
         {
-            if(person == null) return BadRequest();
-
+            if (person == null) return BadRequest();
             return Ok(_personService.Create(person));
         }
 
-        [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Person person, int id){
-            if(person == null) return BadRequest();
-            return Ok(_personService.update(person, id));
+        // Maps PUT requests to https://localhost:{port}/api/person/
+        // [FromBody] consumes the JSON object sent in the request body
+        [HttpPut]
+        public IActionResult Put([FromBody] Person person)
+        {
+            if (person == null) return BadRequest();
+            return Ok(_personService.Update(person));
         }
 
+        // Maps DELETE requests to https://localhost:{port}/api/person/{id}
+        // receiving an ID as in the Request Path
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(long id)
         {
             _personService.Delete(id);
             return NoContent();
         }
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
