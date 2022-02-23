@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj": {}
+    "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj": {}
   },
   "projects": {
-    "/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj": {
+    "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
+        "projectUniqueName": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
         "projectName": "RestWithASPNETUdemy",
-        "projectPath": "/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
+        "projectPath": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
         "packagesPath": "/home/arthur/.nuget/packages/",
-        "outputPath": "/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/",
+        "outputPath": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/arthur/.nuget/NuGet/NuGet.Config"

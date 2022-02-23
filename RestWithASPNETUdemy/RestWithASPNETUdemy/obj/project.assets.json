@@ -659,11 +659,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
+      "projectUniqueName": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
       "projectName": "RestWithASPNETUdemy",
-      "projectPath": "/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
+      "projectPath": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
       "packagesPath": "/home/arthur/.nuget/packages/",
-      "outputPath": "/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/",
+      "outputPath": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/arthur/.nuget/NuGet/NuGet.Config"
@@ -716,5 +716,13 @@
         "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
