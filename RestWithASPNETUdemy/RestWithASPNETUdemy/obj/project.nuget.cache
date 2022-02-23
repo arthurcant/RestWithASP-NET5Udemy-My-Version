@@ -1,12 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "4I3eJbaxjIQopLinvmAdqadtGKTUXzNYR+KykcZ8Dmm4xCLduf2t8926EXIQNmAgSwiC3rGQ5VbBGhO4yOeB2g==",
-=======
-  "dgSpecHash": "/pLZOkhfsxURmtVUZMFUY6O5BlfnEevlNXiRN8HYLIUZQP3bJh7LgmRYWK9w730mxuO538AB0Rp66WlXufcCYQ==",
->>>>>>> database
+  "dgSpecHash": "/LBJPH7JXTyVhJqlJiHXo49/OdBA0Q8UP4SqC9QPOtuSMVFll8znUowKxqioGsphXsEnKxqmOT7ZGPBiDEJQWA==",
   "success": true,
-  "projectFilePath": "/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
+  "projectFilePath": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
   "expectedPackageFiles": [
     "/home/arthur/.nuget/packages/microsoft.entityframeworkcore/5.0.7/microsoft.entityframeworkcore.5.0.7.nupkg.sha512",
     "/home/arthur/.nuget/packages/microsoft.entityframeworkcore.abstractions/5.0.7/microsoft.entityframeworkcore.abstractions.5.0.7.nupkg.sha512",
@@ -27,5 +23,12 @@
     "/home/arthur/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/home/arthur/.nuget/packages/system.diagnostics.diagnosticsource/5.0.1/system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

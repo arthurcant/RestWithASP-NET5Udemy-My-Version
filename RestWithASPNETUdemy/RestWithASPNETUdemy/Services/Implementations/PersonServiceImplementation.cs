@@ -9,7 +9,6 @@ namespace RestWithASPNETUdemy.Services.Implementations
     {
         // Counter responsible for generating a fake ID
         // since we are not accessing any database
-        private volatile int count;
 
         private MySQLContext _context;
 
