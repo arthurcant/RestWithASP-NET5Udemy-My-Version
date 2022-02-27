@@ -34,8 +34,8 @@ namespace RestWithASPNETUdemy
                 DbContextOptions => DbContextOptions
                 .UseMySql(connectionString, serverVersion)
                 .LogTo(Console.WriteLine, LogLevel.Information)
-                //.EnableSensitiveDataLogging()
-                //.EnableDetailedErrors()
+                .EnableSensitiveDataLogging()
+                .EnableDetailedErrors()
             );            
 
             //Dependency Injection
