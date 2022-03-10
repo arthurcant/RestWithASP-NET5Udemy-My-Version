@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/LBJPH7JXTyVhJqlJiHXo49/OdBA0Q8UP4SqC9QPOtuSMVFll8znUowKxqioGsphXsEnKxqmOT7ZGPBiDEJQWA==",
+  "dgSpecHash": "BefiUShNaZsPSXJDpWVIEylZUIDOQfDg1VZKEB2F5o9rSdIQwGiPyz6500z28SQf2xNNhaXSwPufhdyjP4Aq0Q==",
   "success": true,
   "projectFilePath": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
   "expectedPackageFiles": [
+    "/home/arthur/.nuget/packages/microsoft.aspnetcore.mvc.versioning/5.0.0/microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "/home/arthur/.nuget/packages/microsoft.entityframeworkcore/5.0.7/microsoft.entityframeworkcore.5.0.7.nupkg.sha512",
     "/home/arthur/.nuget/packages/microsoft.entityframeworkcore.abstractions/5.0.7/microsoft.entityframeworkcore.abstractions.5.0.7.nupkg.sha512",
     "/home/arthur/.nuget/packages/microsoft.entityframeworkcore.analyzers/5.0.7/microsoft.entityframeworkcore.analyzers.5.0.7.nupkg.sha512",
@@ -23,12 +24,5 @@
     "/home/arthur/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/home/arthur/.nuget/packages/system.diagnostics.diagnosticsource/5.0.1/system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

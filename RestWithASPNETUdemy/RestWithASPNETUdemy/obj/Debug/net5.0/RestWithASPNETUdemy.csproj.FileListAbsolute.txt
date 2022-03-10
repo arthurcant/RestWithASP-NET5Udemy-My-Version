@@ -73,7 +73,6 @@
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.runtimeconfig.json
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.runtimeconfig.dev.json
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/ref/RestWithASPNETUdemy.dll
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.pdb
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -89,7 +88,6 @@
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.CoreCompileInputs.cache
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.MvcApplicationPartsAssemblyInfo.cache
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/staticwebassets/RestWithASPNETUdemy.StaticWebAssets.Manifest.cache
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/staticwebassets/RestWithASPNETUdemy.StaticWebAssets.xml
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/scopedcss/bundle/RestWithASPNETUdemy.styles.css
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.RazorTargetAssemblyInfo.cache
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.CopyComplete
@@ -97,3 +95,6 @@
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/ref/RestWithASPNETUdemy.dll
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.pdb
 /home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.genruntimeconfig.cache
+/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/refint/RestWithASPNETUdemy.dll
+/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.Versioning.dll
+/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.MvcApplicationPartsAssemblyInfo.cs

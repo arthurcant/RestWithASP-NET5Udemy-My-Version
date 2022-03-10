@@ -7,8 +7,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Model.Context;
-using RestWithASPNETUdemy.Services;
-using RestWithASPNETUdemy.Services.Implementations;
+using RestWithASPNETUdemy.Business;
+using RestWithASPNETUdemy.Business.Implementations;
+using RestWithASPNETUdemy.Repository;
+using RestWithASPNETUdemy.Repository.Implementations;
 
 namespace RestWithASPNETUdemy
 {
@@ -25,7 +27,8 @@ namespace RestWithASPNETUdemy
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
+            services.AddMvcCore();
+            services.AddApiVersioning();
             // ServerVersion.AutoDetect(connectionString)
             var connectionString = "Server=localhost;DataBase=rest_with_asp_net_udemy;Uid=root;Pwd=Frigideira879!";
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 28));
@@ -39,7 +42,8 @@ namespace RestWithASPNETUdemy
             );            
 
             //Dependency Injection
-            services.AddScoped<IPersonService, PersonServiceImplementation>();
+            services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
+            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
 
         }
 
