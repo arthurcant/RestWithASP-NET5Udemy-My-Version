@@ -27,7 +27,7 @@ namespace RestWithASPNETUdemy
             services.AddControllers();
 
             // ServerVersion.AutoDetect(connectionString)
-            var connectionString = "Server=localhost;DataBase=rest_with_net_udemy;Uid=root;Pwd=Frigideira879!";
+            var connectionString = "Server=localhost;DataBase=rest_with_asp_net_udemy;Uid=root;Pwd=Frigideira879!";
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 28));
 
             services.AddDbContext<MySQLContext>(
