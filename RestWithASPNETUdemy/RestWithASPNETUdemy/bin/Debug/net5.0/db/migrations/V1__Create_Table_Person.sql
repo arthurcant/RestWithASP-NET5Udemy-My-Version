@@ -1,5 +1,5 @@
 create TABLE IF NOT exists person (
-	id int(20) not null primary key auto_increment,
+	id int(20) not null primary key AUTO_INCREMENT,
 	address varchar(100) not null,
 	first_name varchar(80) not null,
 	gender varchar(10) not null,

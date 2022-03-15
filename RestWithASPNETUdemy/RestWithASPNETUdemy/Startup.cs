@@ -46,11 +46,10 @@ namespace RestWithASPNETUdemy
             var connectionString = "Server=localhost;DataBase=rest_with_asp_net_udemy;Uid=root;Pwd=Frigideira879!";
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 28));
 
-            if (Environment.IsDevelopment())
-            {
-                MigrateDatabase(connectionString);
-            }
-
+            // if (Environment.IsDevelopment())
+            // {
+            //     MigrateDatabase(connectionString);
+            // }
 
             services.AddDbContext<MySQLContext>(
                 DbContextOptions => DbContextOptions
@@ -65,9 +64,6 @@ namespace RestWithASPNETUdemy
             services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
 
         }
-
-
-
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -88,26 +84,26 @@ namespace RestWithASPNETUdemy
                 endpoints.MapControllers();
             });
         }
-        private void MigrateDatabase(string connectionString)
-        {
-            try
-            { //LogInformation
-                var cnx = new SqliteConnection(Configuration.GetConnectionString("MyDatabase"));
-                var evolve = new Evolve.Evolve(cnx, msg => Log.Information(msg))
-                {
-                    // Locations = new List<string> {"db/migrations", "db/dataset"},
-                    Locations = new[] { "db/migrations", "db/dataset"},
-                    IsEraseDisabled = true,
-                };
-             evolve.Migrate();
-            }
-            catch (Exception ex)
-            {
+        // private void MigrateDatabase(string connectionString)
+        // {
+        //     try
+        //     { //LogInformation
+        //         var cnx = new SqliteConnection(Configuration.GetConnectionString("MyDatabase"));
+        //         var evolve = new Evolve.Evolve(cnx, msg => Log.Information(msg))
+        //         {
+        //             // Locations = new List<string> {"db/migrations", "db/dataset"},
+        //             Locations = new[] { "db/migrations", "db/dataset"},
+        //             IsEraseDisabled = true,
+        //         };
+        //      evolve.Migrate();
+        //     }
+        //     catch (Exception ex)
+        //     {
 
-                Log.Error("Database magration failed.", ex);
-                throw;
-            }
-        }
+        //         Log.Error("Database magration failed.", ex);
+        //         throw;
+        //     }
+        // }
         
     }
 }
