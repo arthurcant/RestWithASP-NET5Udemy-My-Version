@@ -1,111 +1,26 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Serilog;
-
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-
-using RestWithASPNETUdemy.Model.Context;
-using RestWithASPNETUdemy.Business;
-using RestWithASPNETUdemy.Business.Implementations;
-using RestWithASPNETUdemy.Repository;
-using RestWithASPNETUdemy.Repository.Implementations;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace RestWithASPNETUdemy
 {
     public class Program
     {
-        private static readonly string EnvironmentName;
-        private static readonly IConfiguration Configuration;
-
-        static Program()
+        public static void Main(string[] args)
         {
-            EnvironmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-            Configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false)
-                .AddJsonFile($"appsettings.{EnvironmentName}.json", optional: true)
-                .AddEnvironmentVariables()
-                .Build();
-
-            Log.Logger = new LoggerConfiguration()
-                .WriteTo.Console()
-                .CreateLogger();
-        }
-        
-        public static int Main(string[] args)
-        {
-            try
-            {
-                Log.Information("Starting web host");
-                CreateHostBuilder(args).Build().Run();
-                return 0;
-            }
-            catch (Exception ex)
-            {
-                Log.Fatal(ex, "Host terminated unexpectedly");
-                return 1;
-            }
-            finally
-            {
-                Log.CloseAndFlush();
-            }
+            CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args){
-
-            MigrateDatabase();
-            
-            return Host.CreateDefaultBuilder(args)
-                       .ConfigureAppConfiguration((hostingContext, config) =>
-                       {
-                           config.AddConfiguration(Configuration);
-                       })
-                       .ConfigureWebHostDefaults(webBuilder =>
-                       {
-                           webBuilder.UseStartup<Startup>();
-                       })
-                       .UseSerilog();
-        }
-
-         private static void MigrateDatabase()
-        {
-            // exclude db/datasets from production and staging environments
-            string filter = EnvironmentName == Environments.Production || EnvironmentName == Environments.Staging
-                ? "db.migrations"
-                : "db";
-
-            try
-            {
-                var cnx = new SqliteConnection(Configuration.GetConnectionString("MyDatabase"));
-                var evolve = new Evolve.Evolve(cnx, msg => Log.Information(msg))
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    EmbeddedResourceAssemblies = new[] { typeof(Startup).Assembly },
-                    EmbeddedResourceFilters = new[] { filter },
-                    IsEraseDisabled = true,
-                    Placeholders = new Dictionary<string, string>
-                    {
-                        ["${table4}"] = "table4"
-                    }
-                };
-
-                evolve.Migrate();
-            }
-            catch (Exception ex)
-            {
-                Log.Error("Database migration failed.", ex);
-                throw;
-            }
-        }
+                    webBuilder.UseStartup<Startup>();
+                });
     }
 }

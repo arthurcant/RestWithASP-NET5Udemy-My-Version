@@ -13,6 +13,7 @@ using RestWithASPNETUdemy.Repository;
 using RestWithASPNETUdemy.Repository.Implementations;
 using Serilog;
 using Microsoft.Data.Sqlite;
+using System.Collections.Generic;
 
 // using Microsoft.Data.Sqlite;
 
@@ -20,17 +21,17 @@ namespace RestWithASPNETUdemy
 {
     public class Startup
     {
-        IConfiguration _configuration;
-        IWebHostEnvironment Environment;
+        IConfiguration _configuration { get; }
+        IWebHostEnvironment Environment { get; }
         // Logger<Startup> _logger;
         public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             _configuration = configuration;
             Environment = environment;
 
-            // Log.Logger = new LoggerConfiguration()
-            // .WriteTo.Console()
-            // .CreateLogger();
+            Log.Logger = new LoggerConfiguration()
+            .WriteTo.Console()
+            .CreateLogger();
         }
 
         public IConfiguration Configuration { get; }
@@ -45,7 +46,11 @@ namespace RestWithASPNETUdemy
             var connectionString = "Server=localhost;DataBase=rest_with_asp_net_udemy;Uid=root;Pwd=Frigideira879!";
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 28));
 
-           
+            if (Environment.IsDevelopment())
+            {
+                MigrateDatabase(connectionString);
+            }
+
 
             services.AddDbContext<MySQLContext>(
                 DbContextOptions => DbContextOptions
@@ -53,7 +58,7 @@ namespace RestWithASPNETUdemy
                 .LogTo(Console.WriteLine, LogLevel.Information)
                 .EnableSensitiveDataLogging()
                 .EnableDetailedErrors()
-            );            
+            );
 
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
@@ -61,7 +66,8 @@ namespace RestWithASPNETUdemy
 
         }
 
-        
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -82,5 +88,26 @@ namespace RestWithASPNETUdemy
                 endpoints.MapControllers();
             });
         }
+        private void MigrateDatabase(string connectionString)
+        {
+            try
+            { //LogInformation
+                var cnx = new SqliteConnection(Configuration.GetConnectionString("MyDatabase"));
+                var evolve = new Evolve.Evolve(cnx, msg => Log.Information(msg))
+                {
+                    // Locations = new List<string> {"db/migrations", "db/dataset"},
+                    Locations = new[] { "db/migrations", "db/dataset"},
+                    IsEraseDisabled = true,
+                };
+             evolve.Migrate();
+            }
+            catch (Exception ex)
+            {
+
+                Log.Error("Database magration failed.", ex);
+                throw;
+            }
+        }
+        
     }
 }
