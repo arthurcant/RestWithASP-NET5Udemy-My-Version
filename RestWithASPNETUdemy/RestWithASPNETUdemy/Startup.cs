@@ -11,14 +11,26 @@ using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementations;
 using RestWithASPNETUdemy.Repository;
 using RestWithASPNETUdemy.Repository.Implementations;
+using Serilog;
+using Microsoft.Data.Sqlite;
+
+// using Microsoft.Data.Sqlite;
 
 namespace RestWithASPNETUdemy
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        IConfiguration _configuration;
+        IWebHostEnvironment Environment;
+        // Logger<Startup> _logger;
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
-            Configuration = configuration;
+            _configuration = configuration;
+            Environment = environment;
+
+            // Log.Logger = new LoggerConfiguration()
+            // .WriteTo.Console()
+            // .CreateLogger();
         }
 
         public IConfiguration Configuration { get; }
@@ -33,6 +45,8 @@ namespace RestWithASPNETUdemy
             var connectionString = "Server=localhost;DataBase=rest_with_asp_net_udemy;Uid=root;Pwd=Frigideira879!";
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 28));
 
+           
+
             services.AddDbContext<MySQLContext>(
                 DbContextOptions => DbContextOptions
                 .UseMySql(connectionString, serverVersion)
@@ -46,6 +60,8 @@ namespace RestWithASPNETUdemy
             services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
 
         }
+
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

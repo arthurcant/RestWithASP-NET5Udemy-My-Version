@@ -68,7 +68,7 @@ namespace RestWithASPNETUdemy.Repository.Implementations
         // being mock we return the same information passed
         public Person Update(Person person)
         {
-            if(!Exist(person.Id)) return new Person();
+            if(!Exist(person.Id)) return null;
             
             var result = _context.People.SingleOrDefault(p => p.Id.Equals(person.Id));
 
