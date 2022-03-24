@@ -14,6 +14,7 @@ using RestWithASPNETUdemy.Repository.Implementations;
 using Serilog;
 using Microsoft.Data.Sqlite;
 using System.Collections.Generic;
+using RestWithASPNETUdemy.Model;
 
 // using Microsoft.Data.Sqlite;
 
@@ -60,8 +61,13 @@ namespace RestWithASPNETUdemy
             );
 
             //Dependency Injection
+            IServiceCollection serviceCollection = services.AddTransient<Person>();
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
             services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+
+            services.AddTransient<Book>();
+            services.AddScoped<IBookBusiness, BookBusinessImplementation>();
+            services.AddScoped<IBookRepository, BookRepositoryImplementation>();
 
         }
 

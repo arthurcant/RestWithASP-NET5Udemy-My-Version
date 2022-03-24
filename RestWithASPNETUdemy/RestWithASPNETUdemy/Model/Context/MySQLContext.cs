@@ -13,5 +13,8 @@ namespace RestWithASPNETUdemy.Model.Context
                                                   // consultada a partir do banco de dados, de um determinado tipo.
                                                   // Os objetos DbSet são criados a partir de um DbContext usando o método DbContext.
         public DbSet<Book> books { get; set; }
+        
+
+
     }
 }
