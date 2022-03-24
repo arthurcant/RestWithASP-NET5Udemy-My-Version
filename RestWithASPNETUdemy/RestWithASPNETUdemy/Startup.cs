@@ -61,11 +61,11 @@ namespace RestWithASPNETUdemy
             );
 
             //Dependency Injection
-            IServiceCollection serviceCollection = services.AddTransient<Person>();
+  //          IServiceCollection serviceCollection = services.AddTransient<Person>();
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
             services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
 
-            services.AddTransient<Book>();
+//            services.AddTransient<Book>();
             services.AddScoped<IBookBusiness, BookBusinessImplementation>();
             services.AddScoped<IBookRepository, BookRepositoryImplementation>();
 

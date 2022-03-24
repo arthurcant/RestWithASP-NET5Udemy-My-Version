@@ -40,7 +40,7 @@ namespace RestWithASPNETUdemy.Repository.Implementations
 
         public List<Book> FindAll()
         {
-            return _contextBook.books.ToList();
+            return _contextBook.Books.ToList();
         }
 
         public Book FindById(long id)
@@ -53,14 +53,14 @@ namespace RestWithASPNETUdemy.Repository.Implementations
 
         private Book FindingId(long id)
         {
-            var bookElement = _contextBook.books.SingleOrDefault((book) => book.Id.Equals(id));
+            var bookElement = _contextBook.Books.SingleOrDefault((book) => book.Id.Equals(id));
             return bookElement;
         }
 
         public Book Update(Book book)
         {
             try{
-                var index = _contextBook.books.SingleOrDefault((book) => book.Id.Equals(book.Id));
+                var index = _contextBook.Books.SingleOrDefault((book) => book.Id.Equals(book.Id));
                 if(index == null) return null;
 
                 _contextBook.Entry(index).CurrentValues.SetValues(book);
