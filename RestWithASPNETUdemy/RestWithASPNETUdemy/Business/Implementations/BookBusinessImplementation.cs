@@ -4,39 +4,41 @@ using System.Linq;
 using System.Threading.Tasks;
 using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Repository;
+using RestWithASPNETUdemy.Repository.Implementations;
+
 namespace RestWithASPNETUdemy.Business.Implementations
 {
     public class BookBusinessImplementation : IBookBusiness
     {
-        private IBookBusiness _iBookRepository;
-        public BookBusinessImplementation(IBookBusiness iBook)
+        private readonly BookRepositoryImplementation _bookRepository;
+        public BookBusinessImplementation(BookRepositoryImplementation iBook)
         {
-            _iBookRepository = iBook;
+            _bookRepository = iBook;
         }
 
         public Book Create(Book book)
         {
-            return _iBookRepository.Create(book);
+            return _bookRepository.Create(book);
         }
 
         public void Delete(long id)
         {
-            _iBookRepository.Delete(id);
+            _bookRepository.Delete(id);
         }
 
         public List<Book> FindAll()
         {
-          return _iBookRepository.FindAll();
+          return _bookRepository.FindAll();
         }
 
         public Book FindById(long id)
         {
-            return _iBookRepository.FindById(id);
+            return _bookRepository.FindById(id);
         }
 
         public Book Update(Book book)
         {
-            return _iBookRepository.Update(book);
+            return _bookRepository.Update(book);
         }
     }
 }
