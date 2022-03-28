@@ -10,8 +10,8 @@ namespace RestWithASPNETUdemy.Business.Implementations
 {
     public class BookBusinessImplementation : IBookBusiness
     {
-        private readonly BookRepositoryImplementation _bookRepository;
-        public BookBusinessImplementation(BookRepositoryImplementation iBook)
+        private readonly IRepository<Book> _bookRepository;
+        public BookBusinessImplementation(IRepository<Book> iBook)
         {
             _bookRepository = iBook;
         }
@@ -40,5 +40,6 @@ namespace RestWithASPNETUdemy.Business.Implementations
         {
             return _bookRepository.Update(book);
         }
+ 
     }
 }

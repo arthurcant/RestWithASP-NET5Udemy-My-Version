@@ -61,13 +61,14 @@ namespace RestWithASPNETUdemy
             );
 
             //Dependency Injection
-           IServiceCollection serviceCollection = services.AddTransient<Person>();
-            services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+           services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
+           services.AddScoped<IBookBusiness, BookBusinessImplementation>();
 
-           services.AddTransient<Book>();
-            services.AddScoped<IBookBusiness, BookBusinessImplementation>();
-            services.AddScoped<IBookRepository, BookRepositoryImplementation>();
+           services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+
+           Console.WriteLine($"{0} e {1}", typeof(IRepository<>), typeof(GenericRepository<>));
+//            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+//            services.AddScoped<IBookRepository, BookRepositoryImplementation>();
 
         }
 
@@ -90,26 +91,6 @@ namespace RestWithASPNETUdemy
                 endpoints.MapControllers();
             });
         }
-        // private void MigrateDatabase(string connectionString)
-        // {
-        //     try
-        //     { //LogInformation
-        //         var cnx = new SqliteConnection(Configuration.GetConnectionString("MyDatabase"));
-        //         var evolve = new Evolve.Evolve(cnx, msg => Log.Information(msg))
-        //         {
-        //             // Locations = new List<string> {"db/migrations", "db/dataset"},
-        //             Locations = new[] { "db/migrations", "db/dataset"},
-        //             IsEraseDisabled = true,
-        //         };
-        //      evolve.Migrate();
-        //     }
-        //     catch (Exception ex)
-        //     {
-
-        //         Log.Error("Database magration failed.", ex);
-        //         throw;
-        //     }
-        // }
         
     }
 }

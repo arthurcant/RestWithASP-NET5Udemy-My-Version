@@ -5,7 +5,7 @@ using RestWithASPNETUdemy.Model;
 
 namespace RestWithASPNETUdemy.Controllers
 {
-    [ApiVersion("1.0")]
+    [ApiVersion("1")]
     [ApiController]
     [Route("api/[controller]/v{version:apiVersion}")]
 
@@ -50,7 +50,7 @@ namespace RestWithASPNETUdemy.Controllers
             return Ok(_iBookBusiness.Update(book));
         }
 
-        [HttpDelete("/{id}")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(long id)
         {
             if(id <= 0) return BadRequest();

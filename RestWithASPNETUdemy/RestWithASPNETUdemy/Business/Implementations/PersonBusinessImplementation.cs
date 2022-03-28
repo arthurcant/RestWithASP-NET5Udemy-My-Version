@@ -11,9 +11,8 @@ namespace RestWithASPNETUdemy.Business.Implementations
         // Counter responsible for generating a fake ID
         // since we are not accessing any database
 
-        private readonly IPersonRepository _repository;
-
-        public PersonBusinessImplementation(IPersonRepository repository)
+        private readonly IRepository<Person> _repository;
+        public PersonBusinessImplementation(IRepository<Person> repository)
         {
             _repository = repository;
         }
@@ -42,7 +41,7 @@ namespace RestWithASPNETUdemy.Business.Implementations
         // as we have not accessed any database we are returning a mock
         public Person FindByID(long id)
         {
-            return _repository.FindByID(id);
+            return _repository.FindById(id);
         }
 
         // Method responsible for updating a person for
@@ -51,6 +50,5 @@ namespace RestWithASPNETUdemy.Business.Implementations
         {
             return _repository.Update(person);
         }
-
     }
 }
