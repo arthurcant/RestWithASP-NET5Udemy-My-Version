@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using RestWithASPNETUdemy.Model.Base;
-
-namespace RestWithASPNETUdemy.Data.VO
+﻿namespace RestWithASPNETUdemy.Data.VO
 {
     public class PersonVO
     {
