@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj": {}
+    "C:\\Users\\ArthurSilva\\OneDrive - BR Efforts\\Área de Trabalho\\projetos\\API\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\RestWithASPNETUdemy.csproj": {}
   },
   "projects": {
-    "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj": {
+    "C:\\Users\\ArthurSilva\\OneDrive - BR Efforts\\Área de Trabalho\\projetos\\API\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\RestWithASPNETUdemy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
+        "projectUniqueName": "C:\\Users\\ArthurSilva\\OneDrive - BR Efforts\\Área de Trabalho\\projetos\\API\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\RestWithASPNETUdemy.csproj",
         "projectName": "RestWithASPNETUdemy",
-        "projectPath": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/RestWithASPNETUdemy.csproj",
-        "packagesPath": "/home/arthur/.nuget/packages/",
-        "outputPath": "/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/",
+        "projectPath": "C:\\Users\\ArthurSilva\\OneDrive - BR Efforts\\Área de Trabalho\\projetos\\API\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\RestWithASPNETUdemy.csproj",
+        "packagesPath": "C:\\Users\\ArthurSilva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ArthurSilva\\OneDrive - BR Efforts\\Área de Trabalho\\projetos\\API\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/arthur/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ArthurSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,6 +47,14 @@
             "Evolve": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Formatters.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Formatters.Xml": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Mvc.Versioning": {
               "target": "Package",
@@ -89,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

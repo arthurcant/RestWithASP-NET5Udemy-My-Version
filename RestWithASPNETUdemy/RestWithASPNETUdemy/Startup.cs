@@ -12,9 +12,8 @@ using RestWithASPNETUdemy.Business.Implementations;
 using RestWithASPNETUdemy.Repository;
 using RestWithASPNETUdemy.Repository.Implementations;
 using Serilog;
-using Microsoft.Data.Sqlite;
-using System.Collections.Generic;
-using RestWithASPNETUdemy.Model;
+using Microsoft.Net.Http.Headers;
+
 
 // using Microsoft.Data.Sqlite;
 
@@ -44,7 +43,7 @@ namespace RestWithASPNETUdemy
             services.AddMvcCore();
             services.AddApiVersioning();
             // ServerVersion.AutoDetect(connectionString)
-            var connectionString = "Server=localhost;DataBase=rest_with_asp_net_udemy;Uid=root;Pwd=Frigideira879!";
+            var connectionString = "Server=localhost;DataBase=rest_with_net_udemy;Uid=root;Pwd=Frigideira879!";
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 28));
 
             // if (Environment.IsDevelopment())
@@ -59,6 +58,16 @@ namespace RestWithASPNETUdemy
                 .EnableSensitiveDataLogging()
                 .EnableDetailedErrors()
             );
+
+            services.AddMvc(options =>
+            {
+                options.RespectBrowserAcceptHeader = true;
+
+                options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
+                options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
+            })
+            .AddXmlSerializerFormatters();
+
 
             //Dependency Injection
            services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();

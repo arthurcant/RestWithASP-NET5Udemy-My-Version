@@ -1,132 +1,66 @@
-<<<<<<< HEAD
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/appsettings.Development.json
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/appsettings.json
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.deps.json
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.runtimeconfig.json
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.runtimeconfig.dev.json
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/ref/RestWithASPNETUdemy.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.pdb
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.OpenApi.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.AssemblyReference.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.GeneratedMSBuildEditorConfig.editorconfig
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.AssemblyInfoInputs.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.AssemblyInfo.cs
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.CoreCompileInputs.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.MvcApplicationPartsAssemblyInfo.cs
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.MvcApplicationPartsAssemblyInfo.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/staticwebassets/RestWithASPNETUdemy.StaticWebAssets.Manifest.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/staticwebassets/RestWithASPNETUdemy.StaticWebAssets.xml
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/scopedcss/bundle/RestWithASPNETUdemy.styles.css
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.RazorTargetAssemblyInfo.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.CopyComplete
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/ref/RestWithASPNETUdemy.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.pdb
-/home/arthur/Documents/dotnet/Udemy dotnet/My copy of the project RestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.genruntimeconfig.cache
-=======
->>>>>>> database
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/appsettings.Development.json
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/appsettings.json
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.deps.json
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.runtimeconfig.json
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.runtimeconfig.dev.json
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/ref/RestWithASPNETUdemy.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.pdb
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.OpenApi.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.AssemblyReference.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.GeneratedMSBuildEditorConfig.editorconfig
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.AssemblyInfoInputs.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.AssemblyInfo.cs
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.CoreCompileInputs.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.MvcApplicationPartsAssemblyInfo.cs
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.MvcApplicationPartsAssemblyInfo.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/staticwebassets/RestWithASPNETUdemy.StaticWebAssets.Manifest.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/staticwebassets/RestWithASPNETUdemy.StaticWebAssets.xml
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/scopedcss/bundle/RestWithASPNETUdemy.styles.css
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.RazorTargetAssemblyInfo.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.CopyComplete
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/ref/RestWithASPNETUdemy.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.pdb
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.genruntimeconfig.cache
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/MySqlConnector.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Pomelo.EntityFrameworkCore.MySql.dll
-/home/arthur/Documents/dotnet/Udemy dotnet/MyRestWithASPNET5Udemy/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/appsettings.Development.json
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/appsettings.json
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.deps.json
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.runtimeconfig.json
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.runtimeconfig.dev.json
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/RestWithASPNETUdemy.pdb
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/MySqlConnector.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Pomelo.EntityFrameworkCore.MySql.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.AssemblyReference.cache
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.GeneratedMSBuildEditorConfig.editorconfig
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.AssemblyInfoInputs.cache
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.AssemblyInfo.cs
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.CoreCompileInputs.cache
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.MvcApplicationPartsAssemblyInfo.cache
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/staticwebassets/RestWithASPNETUdemy.StaticWebAssets.Manifest.cache
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/scopedcss/bundle/RestWithASPNETUdemy.styles.css
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.RazorTargetAssemblyInfo.cache
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.csproj.CopyComplete
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/ref/RestWithASPNETUdemy.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.pdb
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.genruntimeconfig.cache
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/refint/RestWithASPNETUdemy.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.Versioning.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/obj/Debug/net5.0/RestWithASPNETUdemy.MvcApplicationPartsAssemblyInfo.cs
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Evolve.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.Data.Sqlite.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.Extensions.DependencyModel.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Serilog.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Serilog.AspNetCore.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Serilog.Extensions.Hosting.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Serilog.Extensions.Logging.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Serilog.Formatting.Compact.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Serilog.Settings.Configuration.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Serilog.Sinks.Console.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Serilog.Sinks.Debug.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Serilog.Sinks.File.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/SQLitePCLRaw.batteries_v2.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/SQLitePCLRaw.core.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/SQLitePCLRaw.provider.e_sqlite3.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/alpine-x64/native/libe_sqlite3.so
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/linux-arm/native/libe_sqlite3.so
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/linux-arm64/native/libe_sqlite3.so
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/linux-armel/native/libe_sqlite3.so
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/linux-mips64/native/libe_sqlite3.so
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/linux-musl-x64/native/libe_sqlite3.so
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/linux-s390x/native/libe_sqlite3.so
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/linux-x64/native/libe_sqlite3.so
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/linux-x86/native/libe_sqlite3.so
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/osx-arm64/native/libe_sqlite3.dylib
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/osx-x64/native/libe_sqlite3.dylib
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/win-arm/native/e_sqlite3.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/win-arm64/native/e_sqlite3.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/win-x64/native/e_sqlite3.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/runtimes/win-x86/native/e_sqlite3.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Humanizer.dll
-/home/arthur/Documents/Desktop/RestWithASP-NET5Udemy-My-Version/RestWithASPNETUdemy/RestWithASPNETUdemy/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\appsettings.json
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\RestWithASPNETUdemy.exe
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\RestWithASPNETUdemy.deps.json
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\RestWithASPNETUdemy.runtimeconfig.json
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\RestWithASPNETUdemy.runtimeconfig.dev.json
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\RestWithASPNETUdemy.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\ref\RestWithASPNETUdemy.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\RestWithASPNETUdemy.pdb
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Evolve.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Humanizer.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.Data.Sqlite.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Serilog.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Serilog.AspNetCore.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Serilog.Extensions.Hosting.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Serilog.Extensions.Logging.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Serilog.Formatting.Compact.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Serilog.Settings.Configuration.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Serilog.Sinks.Console.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Serilog.Sinks.File.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\SQLitePCLRaw.core.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.csproj.AssemblyReference.cache
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.AssemblyInfoInputs.cache
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.AssemblyInfo.cs
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.csproj.CoreCompileInputs.cache
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\scopedcss\bundle\RestWithASPNETUdemy.styles.css
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\staticwebassets\RestWithASPNETUdemy.StaticWebAssets.Manifest.cache
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.RazorTargetAssemblyInfo.cache
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.csproj.CopyComplete
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\ref\RestWithASPNETUdemy.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.pdb
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\API\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.genruntimeconfig.cache
