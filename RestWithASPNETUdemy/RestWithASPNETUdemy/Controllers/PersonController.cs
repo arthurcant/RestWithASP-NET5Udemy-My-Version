@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Business;
+using RestWithASPNETUdemy.Hypermedia.Filters;
 using RestWithASPNETUdemy.Model;
 
 namespace RestWithASPNETUdemy.Controllers
@@ -22,13 +23,14 @@ namespace RestWithASPNETUdemy.Controllers
             _personBusiness = personBusiness;
         }
 
-        [HttpGet("/ApiVersion")]
-        public string GetApiVersion(ApiVersion apiVersion) => $"Controller = {GetType().Name}\nVersion = {apiVersion}";
+        //[HttpGet("/ApiVersion")]
+        //public string GetApiVersion(ApiVersion apiVersion) => $"Controller = {GetType().Name}\nVersion = {apiVersion}";
         
 
         // Maps GET requests to https://localhost:{port}/api/person
         // Get no parameters for FindAll -> Search All
         [HttpGet]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
             return Ok(_personBusiness.FindAll());
@@ -38,6 +40,7 @@ namespace RestWithASPNETUdemy.Controllers
         // receiving an ID as in the Request Path
         // Get with parameters for FindById -> Search by ID
         [HttpGet("{id}")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
             var person = _personBusiness.FindByID(id);
@@ -48,6 +51,7 @@ namespace RestWithASPNETUdemy.Controllers
         // Maps POST requests to https://localhost:{port}/api/person/
         // [FromBody] consumes the JSON object sent in the request body
         [HttpPost]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody] Person person)
         {
             if (person == null) return BadRequest();
@@ -57,6 +61,7 @@ namespace RestWithASPNETUdemy.Controllers
         // Maps PUT requests to https://localhost:{port}/api/person/
         // [FromBody] consumes the JSON object sent in the request body
         [HttpPut]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody] Person person)
         {
             if (person == null) return BadRequest();

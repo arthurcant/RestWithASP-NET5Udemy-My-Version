@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e+QxlOaq6BVkF/qaegvl/70BpuYAXbWU6q/xbfzHE3pfRzW1YP2NDFR5+FfXkrK/3G05GpQq2t9Eg/3xXrFx3g==",
+  "dgSpecHash": "Ed9IEZ/fi12D/5LgC/VADFNBqlNeWiIKWuZx42Tz2uyNAfJJ6hWxKhsXbzMnjBEUBm/NddPU7IXSGfz6lldueA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ArthurSilva\\OneDrive - BR Efforts\\Área de Trabalho\\projetos\\API\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\RestWithASPNETUdemy.csproj",
+  "projectFilePath": "C:\\Users\\ArthurSilva\\OneDrive - BR Efforts\\Área de Trabalho\\projetos\\RestWithASP-NET5Udemy-My-Version\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\RestWithASPNETUdemy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ArthurSilva\\.nuget\\packages\\evolve\\3.0.0\\evolve.3.0.0.nupkg.sha512",
     "C:\\Users\\ArthurSilva\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

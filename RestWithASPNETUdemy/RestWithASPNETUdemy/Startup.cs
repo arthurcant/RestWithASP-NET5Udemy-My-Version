@@ -13,6 +13,8 @@ using RestWithASPNETUdemy.Repository;
 using RestWithASPNETUdemy.Repository.Implementations;
 using Serilog;
 using Microsoft.Net.Http.Headers;
+using RestWithASPNETUdemy.Hypermedia.Filters;
+using RestWithASPNETUdemy.Hypermedia.Enricher;
 
 
 // using Microsoft.Data.Sqlite;
@@ -68,9 +70,16 @@ namespace RestWithASPNETUdemy
             })
             .AddXmlSerializerFormatters();
 
+            var filterOptions = new HyperMediaFilterOptions();
+            filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
+            filterOptions.ContentResponseEnricherList.Add(new BookEnricher());
+
+            services.AddSingleton(filterOptions);
+
+
 
             //Dependency Injection
-           services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
+            services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
            services.AddScoped<IBookBusiness, BookBusinessImplementation>();
 
            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
@@ -98,6 +107,7 @@ namespace RestWithASPNETUdemy
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute("DefaultApi", "{controller=values}/{id?}");
             });
         }
         
