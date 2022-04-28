@@ -130,3 +130,7 @@ C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithAS
 C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.RazorTargetAssemblyInfo.cache
 C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.csproj.CopyComplete
 C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.genruntimeconfig.cache
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
