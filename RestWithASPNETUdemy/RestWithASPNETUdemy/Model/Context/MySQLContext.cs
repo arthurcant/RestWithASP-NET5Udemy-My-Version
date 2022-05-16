@@ -18,7 +18,7 @@ namespace RestWithASPNETUdemy.Model.Context
                                                   // Os objetos DbSet são criados a partir de um DbContext usando o método DbContext.
         public DbSet<Book> Books { get; set; }
         
-
+        public DbSet<User> Users { get; set; }
 
     }
 }

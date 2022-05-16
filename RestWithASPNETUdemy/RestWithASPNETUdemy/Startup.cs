@@ -17,6 +17,14 @@ using RestWithASPNETUdemy.Hypermedia.Filters;
 using RestWithASPNETUdemy.Hypermedia.Enricher;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Rewrite;
+using RestWithASPNETUdemy.Services.Implementation;
+using RestWithASPNETUdemy.Services;
+using RestWithASPNETUdemy.Configurations;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
 
 
 // using Microsoft.Data.Sqlite;
@@ -25,20 +33,18 @@ namespace RestWithASPNETUdemy
 {
     public class Startup
     {
-        IConfiguration _configuration { get; }
+        IConfiguration Configuration { get; }
         IWebHostEnvironment Environment { get; }
         // Logger<Startup> _logger;
         public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
-            _configuration = configuration;
+            Configuration = configuration;
             Environment = environment;
 
             Log.Logger = new LoggerConfiguration()
             .WriteTo.Console()
             .CreateLogger();
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -82,7 +88,7 @@ namespace RestWithASPNETUdemy
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "REST API'S From 0 to Azure with ASP.NET 6 and Docker",
+                    Title = "REST API'S From 0 to Azure with ASP.NET 5 and Docker",
                     Version = "v1",
                     Description = "API RESTfull developed in course REST API's FROM 0 to Azure with ASP.NET core 5 and Docker",
                     Contact = new OpenApiContact
@@ -96,12 +102,60 @@ namespace RestWithASPNETUdemy
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
             services.AddScoped<IBookBusiness, BookBusinessImplementation>();
+            services.AddScoped<ILoginBusiness, LoginBusinessImplementation>();
 
-           services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<ITokenService, TokenService>();
 
-           Console.WriteLine($"{0} e {1}", typeof(IRepository<>), typeof(GenericRepository<>));
-//            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
-//            services.AddScoped<IBookRepository, BookRepositoryImplementation>();
+            services.AddScoped<IUsersRepository, UsersRepository>();
+
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+             
+            Console.WriteLine($"{0} e {1}", typeof(IRepository<>), typeof(GenericRepository<>));
+
+
+            var tokenConfigurations = new TokenConfiguration();
+
+            new ConfigureFromConfigurationOptions<TokenConfiguration>(
+                Configuration.GetSection("TokenCofigurations")).Configure(tokenConfigurations);
+
+            services.AddSingleton(tokenConfigurations);
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = tokenConfigurations.Issuer,
+                    ValidAudience = tokenConfigurations.Audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenConfigurations.Secret))
+                };
+            });
+
+            services.AddAuthorization(auth => // What do the Bearer policy do ?
+                                              // Add Authorization the kinda Bearer that is specified in the attribute 
+                                              // [Authorize("Bearer")] in the controllers BookController and PersonController.
+                                              // The all method in this controllers only can be access with the Bearer authorization.
+                                              // I felt that's why we have to pass the token in the header to get the access to the controllers' method action.
+            {
+                auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme) //An authentication scheme is a definition of what is required for an authentication process.  This includes the following: The login module stack used to determine whether a user is granted access to an application. The user interfaces used to gather the information required to authenticate a user.
+                    .RequireAuthenticatedUser().Build());
+            });
+
+            services.AddCors(options => options.AddDefaultPolicy(builder =>
+            {
+                builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            }));
 
         }
 
@@ -116,6 +170,8 @@ namespace RestWithASPNETUdemy
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseSwagger();
 

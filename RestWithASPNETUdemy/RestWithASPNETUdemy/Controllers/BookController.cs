@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Business;
@@ -8,8 +9,8 @@ namespace RestWithASPNETUdemy.Controllers
 {
     [ApiVersion("1")]
     [ApiController]
+    [Authorize("Bearer")] // Specify the authorization role to access the controller.
     [Route("api/[controller]/v{version:apiVersion}")]
-
     public class BookController : ControllerBase
     {
 
