@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Repository;
 
@@ -11,8 +9,8 @@ namespace RestWithASPNETUdemy.Business.Implementations
         // Counter responsible for generating a fake ID
         // since we are not accessing any database
 
-        private readonly IRepository<Person> _repository;
-        public PersonBusinessImplementation(IRepository<Person> repository)
+        private readonly IPersonRepository _repository;
+        public PersonBusinessImplementation(IPersonRepository repository)
         {
             _repository = repository;
         }
@@ -28,6 +26,12 @@ namespace RestWithASPNETUdemy.Business.Implementations
         public void Delete(long id)
         {
             _repository.Delete(id);
+        }
+
+        public Person Disable(long id)
+        {
+            var person = _repository.Disable(id);
+            return person;
         }
 
         // Method responsible for returning all people,

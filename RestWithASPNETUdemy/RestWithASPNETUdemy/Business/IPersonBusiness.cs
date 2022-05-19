@@ -9,6 +9,9 @@ namespace RestWithASPNETUdemy.Business
         Person FindByID(long id);
         List<Person> FindAll();
         Person Update(Person person);
+
+        Person Disable(long id);
+
         void Delete(long id);
         
     }

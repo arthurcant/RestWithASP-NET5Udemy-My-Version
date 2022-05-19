@@ -18,5 +18,8 @@ namespace RestWithASPNETUdemy.Model
 
         [Column("gender")]
         public string Gender { get; set; }
+
+        [Column("enable")]
+        public bool Enable { get; set; }
     }
 }
