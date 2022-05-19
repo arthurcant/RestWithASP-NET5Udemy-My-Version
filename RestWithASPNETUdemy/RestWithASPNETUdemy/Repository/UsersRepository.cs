@@ -11,22 +11,31 @@ namespace RestWithASPNETUdemy.Repository
     public class UsersRepository : IUsersRepository
     {
         
-        public MySQLContext _Context;
+        public MySQLContext _context;
         
         public UsersRepository(MySQLContext mySQLContext)
         {
-            _Context = mySQLContext;
+            _context = mySQLContext;
         }
 
         
         public User ValidateCredentials(UserVO user)
         {
             var pass = ComputerHash(user.Password, new SHA256CryptoServiceProvider());
-            return _Context.Users.FirstOrDefault(u => (u.UserName == user.UserName) && (u.Password == pass));
+            return _context.Users.FirstOrDefault(u => (u.UserName == user.UserName) && (u.Password == pass));
         }
         public User ValidateCredentials(string UserName)
         {
-            return _Context.Users.FirstOrDefault(u => (u.UserName == UserName));
+            return _context.Users.FirstOrDefault(u => (u.UserName == UserName));
+        }
+
+        public bool RevokeToken(string userName)
+        {
+            var user = _context.Users.SingleOrDefault(u => (u.UserName == userName));
+            if (user is null) return false;
+            user.RefreshToken = null;
+            _context.SaveChanges();
+            return true;
         }
 
         // embarrassed the password in SHA256.
@@ -45,14 +54,14 @@ namespace RestWithASPNETUdemy.Repository
         {
             if(!Exist(user.Id)) return null;
 
-            var element = _Context.Users.SingleOrDefault((t) => t.Id.Equals(user.Id));
+            var element = _context.Users.SingleOrDefault((t) => t.Id.Equals(user.Id));
 
             if (element != null)
             {
                 try
                 {
-                    _Context.Entry(element).CurrentValues.SetValues(user);
-                    _Context.SaveChanges();
+                    _context.Entry(element).CurrentValues.SetValues(user);
+                    _context.SaveChanges();
                     return element;
 
                 }
@@ -66,20 +75,20 @@ namespace RestWithASPNETUdemy.Repository
         }
 
 
-        public bool Exist(long id) => _Context.Users.Any(p => p.Id.Equals(id));
+        public bool Exist(long id) => _context.Users.Any(p => p.Id.Equals(id));
 
         public User RefreshUserInfo(User user)
         {
-            if (!_Context.Users.Any(u => u.Id.Equals(user.Id))) return null;
+            if (!_context.Users.Any(u => u.Id.Equals(user.Id))) return null;
 
-            var element = _Context.Users.SingleOrDefault((t) => t.Id.Equals(user.Id));
+            var element = _context.Users.SingleOrDefault((t) => t.Id.Equals(user.Id));
 
             if (element != null)
             {
                 try
                 {
-                    _Context.Entry(element).CurrentValues.SetValues(user);
-                    _Context.SaveChanges();
+                    _context.Entry(element).CurrentValues.SetValues(user);
+                    _context.SaveChanges();
                     return user;
 
                 }
@@ -92,5 +101,6 @@ namespace RestWithASPNETUdemy.Repository
             return user;
         }
 
+       
     }
 }

@@ -45,6 +45,8 @@ namespace RestWithASPNETUdemy.Business.Implementations
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpiryTime = DateTime.Now.AddDays(_configuration.DaysToExpiry);
 
+            _repository.RefreshUserInfo(user);
+
             DateTime createDate = DateTime.Now;
             DateTime expirationDate = createDate.AddMinutes(_configuration.Minutes);
 
@@ -69,8 +71,7 @@ namespace RestWithASPNETUdemy.Business.Implementations
             var user = _repository.ValidateCredentials(username);
 
             if (user == null ||
-                user.RefreshToken != refreshToken ||
-                user.RefreshTokenExpiryTime <= DateTime.Now) return null;
+                user.RefreshToken != refreshToken ) return null;
 
             accessToken = _tokenService.GenerateAccessToken((principal.Claims));
             refreshToken = _tokenService.GenerateRefreshToken();
@@ -91,6 +92,11 @@ namespace RestWithASPNETUdemy.Business.Implementations
                 );
 
 
+        }
+
+        public bool RevokeToken(string userName)
+        {
+            return _repository.RevokeToken(userName);
         }
 
     }

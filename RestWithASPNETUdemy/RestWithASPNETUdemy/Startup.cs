@@ -107,10 +107,9 @@ namespace RestWithASPNETUdemy
             services.AddTransient<ITokenService, TokenService>();
 
             services.AddScoped<IUsersRepository, UsersRepository>();
+            //services.AddScoped<IPersonRepository, PersonRepository>();
 
-            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
-             
-            Console.WriteLine($"{0} e {1}", typeof(IRepository<>), typeof(GenericRepository<>));
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>)); ;
 
 
             var tokenConfigurations = new TokenConfiguration();

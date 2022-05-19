@@ -11,6 +11,7 @@ namespace RestWithASPNETUdemy.Business
         TokenVO ValidateCredentials(UserVO userCredentials);
 
         TokenVO ValidateCredentials(TokenVO token);
+        bool RevokeToken(string userName);
 
     }
 }

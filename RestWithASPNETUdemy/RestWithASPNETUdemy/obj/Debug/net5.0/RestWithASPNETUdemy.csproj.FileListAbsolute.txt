@@ -211,3 +211,10 @@ C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\New folder
 C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\New folder (2)\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.RazorTargetAssemblyInfo.cache
 C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\New folder (2)\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.csproj.CopyComplete
 C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\New folder (2)\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.genruntimeconfig.cache
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ArthurSilva\OneDrive - BR Efforts\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

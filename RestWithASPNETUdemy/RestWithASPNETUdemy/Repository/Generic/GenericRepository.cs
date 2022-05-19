@@ -10,7 +10,7 @@ namespace RestWithASPNETUdemy.Repository.Implementations
 {
     public class GenericRepository<T> : IRepository<T> where T: BaseEntity // Essa keyword where vai funcionar como um filtro para dizer que a entidade T vai herda a classe BaseEntity.
     {
-        private MySQLContext _context;
+        protected MySQLContext _context;
 
         private DbSet<T> dataset;
 
