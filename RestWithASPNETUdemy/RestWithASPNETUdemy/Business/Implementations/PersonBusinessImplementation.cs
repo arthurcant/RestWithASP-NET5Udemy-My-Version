@@ -48,6 +48,12 @@ namespace RestWithASPNETUdemy.Business.Implementations
             return _repository.FindById(id);
         }
 
+        public List<Person> FindByName(string firstName, string secondName)
+        {
+            return _repository.FindByName(firstName, secondName);
+
+        }
+
         // Method responsible for updating a person for
         // being mock we return the same information passed
         public Person Update(Person person)

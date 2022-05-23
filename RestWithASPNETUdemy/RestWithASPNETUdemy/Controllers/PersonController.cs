@@ -111,5 +111,11 @@ namespace RestWithASPNETUdemy.Controllers
             _personBusiness.Delete(id);
             return NoContent();
         }
+
+
+        public IActionResult FindByName([])
+        {
+
+        }
     }
 }
