@@ -17,7 +17,7 @@ namespace RestWithASPNETUdemy.Model
         [Column("user_name")]
         public string UserName { get; set; }
         
-        [Column("passwords")]
+        [Column("password")]
         public string Password { get; set; }
         
         [Column("full_name")]

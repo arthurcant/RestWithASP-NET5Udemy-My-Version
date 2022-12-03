@@ -53,8 +53,8 @@ namespace RestWithASPNETUdemy
             services.AddMvcCore();
             services.AddApiVersioning();
             // ServerVersion.AutoDetect(connectionString)
-            var connectionString = "Server=localhost;DataBase=rest_with_net_udemy;Uid=root;Pwd=Frigideira879!";
-            var serverVersion = new MySqlServerVersion(new Version(8, 0, 28));
+            var connectionString = "Server=localhost;DataBase=rest_with_net_udemy;Uid=root;Pwd=root";
+            var serverVersion = new MySqlServerVersion(new Version(8, 0));
 
             // if (Environment.IsDevelopment())
             // {

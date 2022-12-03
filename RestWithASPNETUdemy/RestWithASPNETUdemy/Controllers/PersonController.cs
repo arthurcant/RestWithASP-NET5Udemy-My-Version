@@ -112,10 +112,5 @@ namespace RestWithASPNETUdemy.Controllers
             return NoContent();
         }
 
-
-        public IActionResult FindByName([])
-        {
-
-        }
     }
 }
