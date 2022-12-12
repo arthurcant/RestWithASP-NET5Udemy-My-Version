@@ -21,7 +21,7 @@ namespace RestWithASPNETUdemy.Services.Implementation
 
         public string GenerateAccessToken(IEnumerable<Claim> claims)
         {
-            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MY_SUPER_SECRET_KEY"));
+            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.Secret));
             var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256); // Represents the cryptographic key and security algorithms that are used to generate a digital signature.
 
             var options = new JwtSecurityToken(

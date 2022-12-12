@@ -5,12 +5,12 @@
     "\\RestWithASPNETUdemy\\RestWithASPNETUdemy",
     "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Business",
     "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Business\\Implementations",
-    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Configurations",
-    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Model",
+    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Controllers",
+    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Data\\VO",
     "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Repository",
     "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Services",
     "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Services\\Implementation"
   ],
-  "SelectedNode": "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Data\\VO\\TokenVO.cs",
+  "SelectedNode": "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Services\\Implementation\\TokenService.cs",
   "PreviewInSolutionExplorer": false
 }

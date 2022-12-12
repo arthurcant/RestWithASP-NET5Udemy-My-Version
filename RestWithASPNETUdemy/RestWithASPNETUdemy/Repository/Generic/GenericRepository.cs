@@ -33,7 +33,7 @@ namespace RestWithASPNETUdemy.Repository.Implementations
                 dataset.Add(item);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }

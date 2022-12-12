@@ -57,8 +57,8 @@ namespace RestWithASPNETUdemy.Business.Implementations
                    accessToken,
                    refreshToken
                 );
-
         }
+
         public TokenVO ValidateCredentials(TokenVO token)
         {
             var accessToken = token.AccessToken;
@@ -71,7 +71,8 @@ namespace RestWithASPNETUdemy.Business.Implementations
             var user = _repository.ValidateCredentials(username);
 
             if (user == null ||
-                user.RefreshToken != refreshToken ) return null;
+                user.RefreshToken != refreshToken ||
+                user.RefreshTokenExpiryTime <= DateTime.Now) return null;
 
             accessToken = _tokenService.GenerateAccessToken((principal.Claims));
             refreshToken = _tokenService.GenerateRefreshToken();
@@ -90,8 +91,6 @@ namespace RestWithASPNETUdemy.Business.Implementations
                 accessToken,
                 refreshToken
                 );
-
-
         }
 
         public bool RevokeToken(string userName)

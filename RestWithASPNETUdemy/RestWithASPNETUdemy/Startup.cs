@@ -143,10 +143,12 @@ namespace RestWithASPNETUdemy
                                               // Add Authorization the kinda Bearer that is specified in the attribute 
                                               // [Authorize("Bearer")] in the controllers BookController and PersonController.
                                               // The all method in this controllers only can be access with the Bearer authorization.
-                                              // I felt that's why we have to pass the token in the header to get the access to the controllers' method action.
+                                              // That's why we have to pass the token in the header to get the access to the controllers' method action.
             {
                 auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
-                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme) //An authentication scheme is a definition of what is required for an authentication process.  This includes the following: The login module stack used to determine whether a user is granted access to an application. The user interfaces used to gather the information required to authenticate a user.
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme) //An authentication scheme is a definition of what is required for an authentication process.
+                                                                                      //This includes the following: The login module stack used to determine whether a user is granted access to an application.
+                                                                                      //The user interfaces used to gather the information required to authenticate a user.
                     .RequireAuthenticatedUser().Build());
             });
 
