@@ -11,5 +11,10 @@ namespace RestWithASPNETUdemy.Repository
         List<T> FindAll();
         T Update(T item);
         void Delete(long id);
+
+        List<T> FindWithPagedSearch(string query);
+        int GetCount(string query); // Para manda a quantidade de registros que foram achados para o client 
+                                    // informação interreçante para o front-end trabalha.
+
     }
 }

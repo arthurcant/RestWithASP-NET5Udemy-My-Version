@@ -3,14 +3,15 @@
     "",
     "\\RestWithASPNETUdemy",
     "\\RestWithASPNETUdemy\\RestWithASPNETUdemy",
-    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Business",
-    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Business\\Implementations",
-    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Controllers",
-    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Data\\VO",
+    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Data",
+    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Data\\Converter",
+    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Data\\Converter\\Contract",
+    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Data\\Converter\\Implementations",
     "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Repository",
+    "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Repository\\Generic",
     "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Services",
     "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Services\\Implementation"
   ],
-  "SelectedNode": "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Services\\Implementation\\TokenService.cs",
+  "SelectedNode": "\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\Data\\Converter\\Implementations\\PersonConverter.cs",
   "PreviewInSolutionExplorer": false
 }

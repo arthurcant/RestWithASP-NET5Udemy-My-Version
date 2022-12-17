@@ -88,5 +88,24 @@ namespace RestWithASPNETUdemy.Repository.Implementations
 
         public bool Exist(long id) => dataset.Any(p => p.Id.Equals(id));
 
+        public List<T> FindWithPagedSearch(string query)
+        {
+            return dataset.FromSqlRaw<T>(query).ToList();
+        }
+
+        public int GetCount(string countQuery)
+        {
+            var result = "";
+            using (var connection = _context.Database.GetDbConnection())
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = countQuery;
+                    result = command.ExecuteScalar().ToString();
+                }
+            }
+            return int.Parse(result);
+        }
     }
 }

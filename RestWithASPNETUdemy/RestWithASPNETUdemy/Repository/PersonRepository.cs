@@ -20,7 +20,7 @@ namespace RestWithASPNETUdemy.Repository
 
             if(user != null)
             {
-                user.Enable = false;
+                user.Enabled = false;
 
                 try
                 {

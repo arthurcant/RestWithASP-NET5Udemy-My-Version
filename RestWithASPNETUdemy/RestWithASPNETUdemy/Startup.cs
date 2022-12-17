@@ -52,66 +52,6 @@ namespace RestWithASPNETUdemy
             services.AddControllers();
             services.AddMvcCore();
             services.AddApiVersioning();
-            // ServerVersion.AutoDetect(connectionString)
-            var connectionString = "Server=localhost;DataBase=rest_with_net_udemy;Uid=root;Pwd=root";
-            var serverVersion = new MySqlServerVersion(new Version(8, 0));
-
-            // if (Environment.IsDevelopment())
-            // {
-            //     MigrateDatabase(connectionString);
-            // }
-
-            services.AddDbContext<MySQLContext>(
-                DbContextOptions => DbContextOptions
-                .UseMySql(connectionString, serverVersion)
-                .LogTo(Console.WriteLine, LogLevel.Information)
-                .EnableSensitiveDataLogging()
-                .EnableDetailedErrors()
-            );
-
-            services.AddMvc(options =>
-            {
-                options.RespectBrowserAcceptHeader = true;
-
-                options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
-                options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
-            })
-            .AddXmlSerializerFormatters();
-
-            var filterOptions = new HyperMediaFilterOptions();
-            filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
-            filterOptions.ContentResponseEnricherList.Add(new BookEnricher());
-
-            services.AddSingleton(filterOptions);
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "REST API'S From 0 to Azure with ASP.NET 5 and Docker",
-                    Version = "v1",
-                    Description = "API RESTfull developed in course REST API's FROM 0 to Azure with ASP.NET core 5 and Docker",
-                    Contact = new OpenApiContact
-                    {
-                        Name = "Arthur Cavalcante",
-                        Url = new Uri("https://github.com/arthurcant")
-                    }
-                });
-            });
-
-            //Dependency Injection
-            services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-            services.AddScoped<IBookBusiness, BookBusinessImplementation>();
-            services.AddScoped<ILoginBusiness, LoginBusinessImplementation>();
-
-            services.AddTransient<ITokenService, TokenService>();
-
-            services.AddScoped<IUsersRepository, UsersRepository>();
-            services.AddScoped<IPersonRepository, PersonRepository>();
-            //services.AddScoped<IPersonRepository, PersonRepository>();
-
-            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>)); ;
-
 
             var tokenConfigurations = new TokenConfiguration();
 
@@ -150,7 +90,71 @@ namespace RestWithASPNETUdemy
                                                                                       //This includes the following: The login module stack used to determine whether a user is granted access to an application.
                                                                                       //The user interfaces used to gather the information required to authenticate a user.
                     .RequireAuthenticatedUser().Build());
+            }); 
+
+            // ServerVersion.AutoDetect(connectionString)
+            var connectionString = "Server=localhost;DataBase=rest_with_net_udemy;Uid=root;Pwd=root";
+            var serverVersion = new MySqlServerVersion(new Version(8, 0));
+
+            // if (Environment.IsDevelopment())
+            // {
+            //     MigrateDatabase(connectionString);
+            // }
+
+            services.AddDbContext<MySQLContext>(
+                DbContextOptions => DbContextOptions
+                .UseMySql(connectionString, serverVersion)
+                .LogTo(Console.WriteLine, LogLevel.Information)
+                .EnableSensitiveDataLogging()
+                .EnableDetailedErrors()
+            );
+
+            services.AddMvc(options =>
+            {
+                options.RespectBrowserAcceptHeader = true;
+
+                options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
+                options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
+            })
+            .AddXmlSerializerFormatters();
+
+            var filterOptions = new HyperMediaFilterOptions();
+            filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
+            filterOptions.ContentResponseEnricherList.Add(new BookEnricher());
+
+            services.AddSingleton(filterOptions);
+
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "REST API'S From 0 to Azure with ASP.NET 5 and Docker",
+                    Version = "v1",
+                    Description = "API RESTfull developed in course REST API's FROM 0 to Azure with ASP.NET core 5 and Docker",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Arthur Cavalcante",
+                        Url = new Uri("https://github.com/arthurcant")
+                    }
+                });
             });
+
+            //Dependency Injection
+            services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
+            services.AddScoped<IBookBusiness, BookBusinessImplementation>();
+            services.AddScoped<ILoginBusiness, LoginBusinessImplementation>();
+
+            services.AddTransient<ITokenService, TokenService>();
+
+            services.AddScoped<IUsersRepository, UsersRepository>();
+            services.AddScoped<IPersonRepository, PersonRepository>();
+            //services.AddScoped<IPersonRepository, PersonRepository>();
+
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>)); ;
+
+
+           
 
             services.AddCors(options => options.AddDefaultPolicy(builder =>
             {
@@ -191,7 +195,7 @@ namespace RestWithASPNETUdemy
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapControllerRoute("DefaultApi", "{controller=values}/{id?}");
+                endpoints.MapControllerRoute("DefaultApi", "{controller=swagger}/index");
             });
         }
         

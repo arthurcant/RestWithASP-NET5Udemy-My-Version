@@ -1,24 +1,26 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using RestWithASPNETUdemy.Data.Converter.Implementations;
+using RestWithASPNETUdemy.Data.VO;
 using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Repository;
-using RestWithASPNETUdemy.Repository.Implementations;
+using System.Collections.Generic;
 
 namespace RestWithASPNETUdemy.Business.Implementations
 {
     public class BookBusinessImplementation : IBookBusiness
     {
         private readonly IRepository<Book> _bookRepository;
-        public BookBusinessImplementation(IRepository<Book> iBook)
+        private readonly BookConverter _converter;
+        public BookBusinessImplementation(IRepository<Book> bookRepository)
         {
-            _bookRepository = iBook;
+            _bookRepository = bookRepository;
+            _converter = new BookConverter();
         }
 
-        public Book Create(Book book)
+        public BookVO Create(BookVO book)
         {
-            return _bookRepository.Create(book);
+            var bookEntity = _converter.Parse(book);
+            bookEntity = _bookRepository.Create(bookEntity);
+            return _converter.Parse(bookEntity);
         }
 
         public void Delete(long id)
@@ -26,20 +28,22 @@ namespace RestWithASPNETUdemy.Business.Implementations
             _bookRepository.Delete(id);
         }
 
-        public List<Book> FindAll()
+        public List<BookVO> FindAll()
         {
-          return _bookRepository.FindAll();
+            return _converter.Parse(_bookRepository.FindAll());
         }
 
-        public Book FindById(long id)
+        public BookVO FindById(long id)
         {
-            return _bookRepository.FindById(id);
+            var bookEntity = _bookRepository.FindById(id);
+            return _converter.Parse(bookEntity);
         }
 
-        public Book Update(Book book)
+        public BookVO Update(BookVO book)
         {
-            return _bookRepository.Update(book);
+            var bookEntity = _converter.Parse(book);
+            bookEntity = _bookRepository.Update(bookEntity);
+            return _converter.Parse(bookEntity);
         }
- 
     }
 }

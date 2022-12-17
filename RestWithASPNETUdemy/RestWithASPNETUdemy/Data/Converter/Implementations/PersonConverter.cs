@@ -41,7 +41,6 @@ namespace RestWithASPNETUdemy.Data.Converter.Implementations
             return origin.Select(item => Parse(item)).ToList();
         }
 
-
         public List<PersonVO> Parse(List<Person> origin)
         {
             if(origin == null) return null;

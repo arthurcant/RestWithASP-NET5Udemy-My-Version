@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Business;
+using RestWithASPNETUdemy.Data.VO;
 using RestWithASPNETUdemy.Hypermedia.Filters;
 using RestWithASPNETUdemy.Model;
 
@@ -40,7 +41,7 @@ namespace RestWithASPNETUdemy.Controllers
 
         [HttpPost]
         [TypeFilter(typeof(HyperMediaFilter))]
-        public IActionResult CreateBook([FromBody] Book book)
+        public IActionResult CreateBook([FromBody] BookVO book)
         {
             if(book == null) return BadRequest();
 
@@ -49,7 +50,7 @@ namespace RestWithASPNETUdemy.Controllers
 
         [HttpPut]
         [TypeFilter(typeof(HyperMediaFilter))]
-        public IActionResult UpdateBook([FromBody] Book book)
+        public IActionResult UpdateBook([FromBody] BookVO book)
         {
             if(book == null) return BadRequest();
 

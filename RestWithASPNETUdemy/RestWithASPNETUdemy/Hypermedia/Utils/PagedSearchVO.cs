@@ -5,9 +5,8 @@ using System.Collections.Generic;
 namespace RestWithASPNETUdemy.Hypermedia.Utils
 {
 
-    public class PagedSearchVO<T> where T : ISupportsHyperMedia
+    public class PagedSearchVO<T> where T : ISupportsHyperMedia     
     {
-
         public int CurrentPage { get; set; }
         public int PageSize { get; set; }
         public int TotalResults { get; set; }

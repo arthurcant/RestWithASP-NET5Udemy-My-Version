@@ -1,17 +1,21 @@
-﻿using RestWithASPNETUdemy.Model;
+﻿using RestWithASPNETUdemy.Data.VO;
+using RestWithASPNETUdemy.Hypermedia.Utils;
+using RestWithASPNETUdemy.Model;
 using System.Collections.Generic;
 
 namespace RestWithASPNETUdemy.Business
 {
     public interface IPersonBusiness
     {
-        Person Create(Person person);
-        Person FindByID(long id);
-        List<Person> FindAll();
-        Person Update(Person person);
-        Person Disable(long id);
+        PersonVO Create(PersonVO person);
+        PersonVO FindByID(long id);
+        List<PersonVO> FindAll();
+
+        PagedSearchVO<PersonVO> FindWithPagedSearch(string name, string sortDirection, int pageSize, int page);
+        PersonVO Update(PersonVO person);
+        PersonVO Disable(long id);
         void Delete(long id);
-        List<Person> FindByName(string firstName, string secondName);
+        List<PersonVO> FindByName(string firstName, string secondName);
         
     }
 }

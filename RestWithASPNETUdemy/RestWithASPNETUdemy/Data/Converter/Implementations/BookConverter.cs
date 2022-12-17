@@ -28,7 +28,8 @@ namespace RestWithASPNETUdemy.Data.Converter.Implementations
         {
             if(origin == null) return null;
 
-            return new Book {
+            return new Book
+            {
                 Id = origin.Id,
                 Author = origin.Author,
                 launchDate = origin.LaunchDate,

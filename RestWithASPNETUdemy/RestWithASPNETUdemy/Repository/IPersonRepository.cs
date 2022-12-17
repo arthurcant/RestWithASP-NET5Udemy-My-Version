@@ -10,7 +10,7 @@ namespace RestWithASPNETUdemy.Repository
     {
         Person Disable(long id);
 
-        List<Person> FindByName(string firstName, string secondName);
+        List<Person> FindByName(string firstName, string lastName);
         
     }
 }
