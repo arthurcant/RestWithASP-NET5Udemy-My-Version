@@ -25,6 +25,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
+using System.IO;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 
 // using Microsoft.Data.Sqlite;
@@ -33,6 +36,8 @@ namespace RestWithASPNETUdemy
 {
     public class Startup
     {
+        private IHttpContextAccessor context;
+
         IConfiguration Configuration { get; }
         IWebHostEnvironment Environment { get; }
         // Logger<Startup> _logger;
@@ -124,7 +129,6 @@ namespace RestWithASPNETUdemy
 
             services.AddSingleton(filterOptions);
 
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -141,6 +145,10 @@ namespace RestWithASPNETUdemy
             });
 
             //Dependency Injection
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddScoped<IFileBusiness, FileBusinessImplementation>();
+
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
             services.AddScoped<IBookBusiness, BookBusinessImplementation>();
             services.AddScoped<ILoginBusiness, LoginBusinessImplementation>();

@@ -19,6 +19,27 @@ namespace RestWithASPNETUdemy.Model.Context
         public DbSet<Book> Books { get; set; }
         
         public DbSet<User> Users { get; set; }
-
-    }
+        public virtual DbSet<Teste> Testes { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder
+                .UseMySql(@"Data Source=Macoratti;Initial Catalog=Northwind;Integrated Security=True");
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Teste>().HasData(
+                new Teste
+                {
+                    TesteId = 1,
+                    Nome = "Macoratti",
+                    Email = "macoratti@yahoo.com"
+                },
+                new Teste
+                {
+                    TesteId = 2,
+                    Nome = "Miriam",
+                    Email = "mimi@hotmail.com"
+                }
+            );
+        }
 }

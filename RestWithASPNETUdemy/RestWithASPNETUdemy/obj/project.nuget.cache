@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R/pkCIyFvQzYVJy6vuaPqUC/Sby6wYyTodvFZRxKJmeMK5To8+bJKfSr22LiJHZGQL8WD5bJjT1+4y5egCrLvw==",
+  "dgSpecHash": "fcdIro7eOehAJZYWK6WN6j1n4CeQSwswSzMUebHBHceS4ZyU0TzOp9E9rPy4ZrpNq78hnRMghAnoELyXSLWsYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arthu\\source\\repos\\arthurcant\\RestWithASP-NET5Udemy-My-Version\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\RestWithASPNETUdemy.csproj",
+  "projectFilePath": "C:\\Users\\arthu\\OneDrive - Scai Hub\\Área de Trabalho\\projetos\\RestWithASP-NET5Udemy-My-Version\\RestWithASPNETUdemy\\RestWithASPNETUdemy\\RestWithASPNETUdemy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arthu\\.nuget\\packages\\evolve\\3.0.0\\evolve.3.0.0.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -59,6 +59,7 @@
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.7.1\\microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\mysqlconnector\\1.3.10\\mysqlconnector.1.3.10.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\5.0.1\\pomelo.entityframeworkcore.mysql.5.0.1.nupkg.sha512",
