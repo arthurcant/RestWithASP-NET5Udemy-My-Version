@@ -28,6 +28,9 @@ using Microsoft.AspNetCore.Authorization;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using EvolveDb;
+using System.Collections.Generic;
+using MySqlConnector;
 
 
 // using Microsoft.Data.Sqlite;
@@ -101,10 +104,10 @@ namespace RestWithASPNETUdemy
             var connectionString = "Server=localhost;DataBase=rest_with_net_udemy;Uid=root;Pwd=root";
             var serverVersion = new MySqlServerVersion(new Version(8, 0));
 
-            // if (Environment.IsDevelopment())
-            // {
-            //     MigrateDatabase(connectionString);
-            // }
+            if (Environment.IsDevelopment())
+            {
+                MigrateDatabase(connectionString);
+            }
 
             services.AddDbContext<MySQLContext>(
                 DbContextOptions => DbContextOptions
@@ -206,6 +209,25 @@ namespace RestWithASPNETUdemy
                 endpoints.MapControllerRoute("DefaultApi", "{controller=swagger}/index");
             });
         }
-        
+
+        private void MigrateDatabase(string connection)
+        {
+            try
+            {
+                var evolveConnection = new MySqlConnection(connection);
+                var evolve = new Evolve(evolveConnection, msg => Log.Information(msg))
+                {
+                    Locations = new List<string> { "db/migrations", "db/dataset" },
+                    IsEraseDisabled = true,
+                };
+                evolve.Migrate();
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Database migration failed", ex);
+                throw;
+            }
+        }
+
     }
 }
