@@ -104,10 +104,10 @@ namespace RestWithASPNETUdemy
             var connectionString = "Server=localhost;DataBase=rest_with_net_udemy;Uid=root;Pwd=root";
             var serverVersion = new MySqlServerVersion(new Version(8, 0));
 
-            if (Environment.IsDevelopment())
-            {
-                MigrateDatabase(connectionString);
-            }
+            //if (Environment.IsDevelopment())
+            //{
+            //    MigrateDatabase(connectionString);
+            //}
 
             services.AddDbContext<MySQLContext>(
                 DbContextOptions => DbContextOptions
