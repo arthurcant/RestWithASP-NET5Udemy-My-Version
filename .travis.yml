@@ -9,13 +9,12 @@ before_install:
 script:
   - docker-compose build
 before_deploy:
-  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME"
-    --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
 deploy:
   provider: script
-  script: docker tag api-asp-net-core-5:latest
-    $DOCKER_USERNAME/api-asp-net-core-5:$TRAVIS_JOB_ID; docker push
-    $DOCKER_USERNAME/api-asp-net-core-5:$TRAVIS_JOB_ID;
+  script: 
+    docker tag rest-with-asp-net-udemy:latest $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID
+    docker push $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID;
   on:
     brach: main
 notifications:
