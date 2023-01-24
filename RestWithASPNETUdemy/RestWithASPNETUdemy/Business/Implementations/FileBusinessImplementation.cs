@@ -24,7 +24,7 @@ namespace RestWithASPNETUdemy.Business.Implementations
 
         public async Task<FileDetailVO> SaveFileToDisk(IFormFile file)
         {
-            FileDetailVO fileDetail= new FileDetailVO();
+            FileDetailVO fileDetail = new FileDetailVO();
 
             var fileType = Path.GetExtension(file.FileName);
             var baseUrl = _context.HttpContext.Request.Host; // Pega endereço da applicação ex ta no localhost:4000,

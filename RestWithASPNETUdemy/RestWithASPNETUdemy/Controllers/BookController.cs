@@ -4,7 +4,6 @@ using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Data.VO;
 using RestWithASPNETUdemy.Hypermedia.Filters;
-using RestWithASPNETUdemy.Model;
 
 namespace RestWithASPNETUdemy.Controllers
 {
@@ -14,7 +13,6 @@ namespace RestWithASPNETUdemy.Controllers
     [Route("api/[controller]/v{version:apiVersion}")]
     public class BookController : ControllerBase
     {
-
         private IBookBusiness _iBookBusiness;
         private readonly ILogger<BookController> _iLogger;
         public BookController(ILogger<BookController> log, IBookBusiness iBookBusiness)

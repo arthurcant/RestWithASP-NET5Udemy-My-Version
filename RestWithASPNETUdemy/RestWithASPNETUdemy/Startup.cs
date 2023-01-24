@@ -162,10 +162,7 @@ namespace RestWithASPNETUdemy
             services.AddScoped<IPersonRepository, PersonRepository>();
             //services.AddScoped<IPersonRepository, PersonRepository>();
 
-            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>)); ;
-
-
-           
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
             services.AddCors(options => options.AddDefaultPolicy(builder =>
             {

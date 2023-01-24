@@ -24,6 +24,7 @@ namespace RestWithASPNETUdemy.Repository
             var pass = ComputerHash(user.Password, new SHA256CryptoServiceProvider());
             return _context.Users.FirstOrDefault(u => (u.UserName == user.UserName) && (u.Password == pass));
         }
+
         public User ValidateCredentials(string UserName)
         {
             return _context.Users.FirstOrDefault(u => (u.UserName == UserName));
