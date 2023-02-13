@@ -1,36 +1,34 @@
-using System;
+using EvolveDb;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using RestWithASPNETUdemy.Model.Context;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.Net.Http.Headers;
+using Microsoft.OpenApi.Models;
+using MySqlConnector;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementations;
+using RestWithASPNETUdemy.Configurations;
+using RestWithASPNETUdemy.Hypermedia.Enricher;
+using RestWithASPNETUdemy.Hypermedia.Filters;
+using RestWithASPNETUdemy.Model.Context;
 using RestWithASPNETUdemy.Repository;
 using RestWithASPNETUdemy.Repository.Implementations;
-using Serilog;
-using Microsoft.Net.Http.Headers;
-using RestWithASPNETUdemy.Hypermedia.Filters;
-using RestWithASPNETUdemy.Hypermedia.Enricher;
-using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Rewrite;
-using RestWithASPNETUdemy.Services.Implementation;
 using RestWithASPNETUdemy.Services;
-using RestWithASPNETUdemy.Configurations;
-using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Microsoft.AspNetCore.Authorization;
-using System.IO;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using EvolveDb;
+using RestWithASPNETUdemy.Services.Implementation;
+using Serilog;
+using System;
 using System.Collections.Generic;
-using MySqlConnector;
+using System.Text;
 
 
 // using Microsoft.Data.Sqlite;
@@ -98,7 +96,7 @@ namespace RestWithASPNETUdemy
                                                                                       //This includes the following: The login module stack used to determine whether a user is granted access to an application.
                                                                                       //The user interfaces used to gather the information required to authenticate a user.
                     .RequireAuthenticatedUser().Build());
-            }); 
+            });
 
             // ServerVersion.AutoDetect(connectionString)
             var connectionString = "Server=localhost;DataBase=rest_with_net_udemy;Uid=root;Pwd=root";
@@ -189,7 +187,8 @@ namespace RestWithASPNETUdemy
 
             app.UseSwagger();
 
-            app.UseSwaggerUI(c => {
+            app.UseSwaggerUI(c =>
+            {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json",
                     "REST API's From 0 to Azure with ASP.NET Core 5 and Docker - v1");
             });

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Data.VO;
 using RestWithASPNETUdemy.Hypermedia.Filters;
+using System.Collections.Generic;
 
 namespace RestWithASPNETUdemy.Controllers
 {
@@ -21,11 +22,19 @@ namespace RestWithASPNETUdemy.Controllers
             _iLogger = log;
         }
 
-        [HttpGet]
+        [HttpGet("{sortDirection}/{pageSize}/{page}")]
+        [ProducesResponseType(200, Type = typeof(List<BookVO>))]
+        [ProducesResponseType(203)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
-        public IActionResult GetAllBooks(){
-            return Ok(_iBookBusiness.FindAll());
-        }       
+        public IActionResult Get([FromQuery] string title,
+            string sortDirection,
+            int pageSize,
+            int page)
+        {
+            return Ok(_iBookBusiness.FindWithPagedSearch(title, sortDirection, pageSize, page));
+        }
 
         [HttpGet("{id}")]
         [TypeFilter(typeof(HyperMediaFilter))]
@@ -41,7 +50,7 @@ namespace RestWithASPNETUdemy.Controllers
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult CreateBook([FromBody] BookVO book)
         {
-            if(book == null) return BadRequest();
+            if (book == null) return BadRequest();
 
             return Ok(_iBookBusiness.Create(book));
         }

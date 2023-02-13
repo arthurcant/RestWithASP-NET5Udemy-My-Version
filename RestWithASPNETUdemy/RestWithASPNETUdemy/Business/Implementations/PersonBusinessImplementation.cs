@@ -58,7 +58,7 @@ namespace RestWithASPNETUdemy.Business.Implementations
 
             string query = @"select * from person p where 1 = 1"; // Where 1 = 1 é para garanti que a query seja executada mesmo se
                                                                   // o usuário não passou as variaveis sort, size, offset;
-            if (!string.IsNullOrEmpty(name)) query += query + $" and p.first_name like '%{name}%' ";
+            if (!string.IsNullOrEmpty(name)) query +=  $" and p.first_name like '%{name}%' ";
             query += $" order by p.first_name {sort} limit {size} offset {offset}";
 
             string countQuery = @"select count(*) from person p where 1 = 1";

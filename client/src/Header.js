@@ -1,13 +1,12 @@
 import React from "react";
 
-export default function Header (props) {
-
+const Header = (props) => {
     return (
         <header>
-            <h1>{props}</h1>
+            <h1>Counter: {props.counter}</h1>
         </header>
     )
-
 }
 
 
+export default Header;
