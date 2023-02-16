@@ -25,7 +25,7 @@ namespace RestWithASPNETUdemy.Hypermedia
 
         protected abstract Task EnrichModel(T content, IUrlHelper urlHelper);
 
-        bool IResponseEnricher.CanEnrich(ResultExecutingContext response)
+        public bool CanEnrich(ResultExecutingContext response)
         {
             if (response.Result is OkObjectResult okObjectResult)
             {
