@@ -12,7 +12,5 @@ namespace RestWithASPNETUdemy.Configurations
         public string Secret { get; set; }
         public int Minutes { get; set; }
         public int DaysToExpiry { get; set; }
-
-
     }
 }
