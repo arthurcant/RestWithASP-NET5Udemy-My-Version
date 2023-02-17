@@ -3,9 +3,9 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>70e0e709-64d6-48ba-af90-ee05dd1137d5</ProjectGuid>
+    <ProjectGuid>2a2e9438-5b11-4c15-ada7-82c2d248c5f3</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/person/v1</DockerServiceUrl>
     <DockerServiceName>rest-with-asp-net-udemy</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>

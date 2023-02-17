@@ -1,0 +1,1 @@
+ALTER TABLE person add column `enabled` tinyint NOT NULL DEFAULT 1 AFTER `gender`;

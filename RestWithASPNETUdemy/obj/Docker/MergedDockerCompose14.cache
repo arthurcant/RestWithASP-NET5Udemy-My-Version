@@ -1,0 +1,73 @@
+name: dockercompose5136898410429715096
+services:
+  rest-with-asp-net-udemy:
+    build:
+      context: C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy
+      dockerfile: RestWithASPNETUdemy/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: RestWithASPNETUdemy
+      target: base
+    container_name: RestWithASPNETUdemy
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: restwithaspnetudemy:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net5.0/RestWithASPNETUdemy.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\arthu\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\arthu\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+      target: /root/.nuget/fallbackpackages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\arthu\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\arthu\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: dockercompose5136898410429715096_default

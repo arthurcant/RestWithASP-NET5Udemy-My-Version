@@ -2,8 +2,8 @@ version: '3.4'
 
 services:
   db:
-    image: rest-with-asp-net-udemy
-    command: mysqld --default-authentication-plugin=mmysql_native_password
+    image: rest-with-asp-net-udemy-db
+    command: mysqld --default-authentication-plugin=mysql_native_password
     restart: always
     build:
       context: .
@@ -13,7 +13,7 @@ services:
       MYSQL_ROOT_PASSWORD: docker
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
-      MYSQL_DATABASE: rest-with-asp-net-udemy
+      MYSQL_DATABASE: rest_with_asp_net_udemy
     ports:
       - 3308:3306
     networks:

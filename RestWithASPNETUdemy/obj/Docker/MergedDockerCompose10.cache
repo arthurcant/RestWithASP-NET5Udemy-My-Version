@@ -1,0 +1,12 @@
+name: dockercompose5136898410429715096
+services:
+  restwithaspnetudemy:
+    build:
+      context: C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy
+      dockerfile: RestWithASPNETUdemy/Dockerfile
+    image: restwithaspnetudemy
+    networks:
+      default: null
+networks:
+  default:
+    name: dockercompose5136898410429715096_default

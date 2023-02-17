@@ -99,9 +99,8 @@ namespace RestWithASPNETUdemy
                     .RequireAuthenticatedUser().Build());
             });
 
-            // ServerVersion.AutoDetect(connectionString)
-            var connectionString = "Server=localhost;DataBase=rest_with_net_udemy;Uid=root;Pwd=root";
-            var serverVersion = new MySqlServerVersion(new Version(8, 0));
+            var connectionString = "Server=db;DataBase=rest_with_asp_net_udemy;Uid=root;Pwd=docker;SslMode=none;";
+            var serverVersion = new MySqlServerVersion(new Version(5, 7, 22));
 
             //if (Environment.IsDevelopment())
             //{

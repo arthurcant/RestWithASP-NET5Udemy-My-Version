@@ -3,7 +3,6 @@ C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Ud
 C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\RestWithASPNETUdemy.runtimeconfig.dev.json
 C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\appsettings.Development.json
 C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\appsettings.json
-C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\db\migrations\V1__Full_Dump_Postgres.sql
 C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\RestWithASPNETUdemy.exe
 C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\RestWithASPNETUdemy.dll
 C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\Serilog.dll
@@ -29,6 +28,14 @@ C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Ud
 C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\obj\Debug\docker-compose.dcproj.CopyComplete
-C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\Npgsql.dll
 C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\Evolve.dll
-C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\db\dataset\V2__Populate_Table_Person.sql
+C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\db\dataset\V4__Insert_Data_In_Books.sql
+C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\db\dataset\V6__Insert_Data_In_Users.sql
+C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\db\dataset\V8__Populate_Person_With_Many.sql
+C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\db\migrations\V1__Create_Table_Person.sql
+C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\db\migrations\V3__Create_Table_Books.sql
+C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\db\migrations\V5__Create_Table_Users.sql
+C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\db\migrations\V7__Alter_Table_Person.sql
+C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\MySqlConnector.dll
+C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\bin\Debug\Pomelo.EntityFrameworkCore.MySql.dll

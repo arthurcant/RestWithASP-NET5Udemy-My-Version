@@ -14,8 +14,8 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=/root/.nuget/fallbackpackages
     volumes:
-      - C:\Users\arthu\source\repos\arthurcant\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy:/app
-      - C:\Users\arthu\source\repos\arthurcant\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy:/src
+      - C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy\RestWithASPNETUdemy:/app
+      - C:\Users\arthu\OneDrive - Scai Hub\Área de Trabalho\projetos\RestWithASP-NET5Udemy-My-Version\RestWithASPNETUdemy:/src
       - C:\Users\arthu\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\arthu\.nuget\packages\:/root/.nuget/packages:ro
       - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
