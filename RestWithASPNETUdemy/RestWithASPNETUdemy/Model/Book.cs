@@ -4,7 +4,7 @@ using RestWithASPNETUdemy.Model.Base;
 
 namespace RestWithASPNETUdemy.Model
 {
-    [Table("books")]
+    [Table("book")]
     public class Book : BaseEntity
     {
 

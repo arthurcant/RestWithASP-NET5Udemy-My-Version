@@ -39,11 +39,11 @@ namespace RestWithASPNETUdemy.Services.Implementation
 
         public string GenerateRefreshToken()
         {
-            var randomNumber = new byte[32];
-            using (var rng = RandomNumberGenerator.Create())
+            var randomNumber = new byte[32]; 
+            using (var rng = RandomNumberGenerator.Create()) // Esse metodo create() criar uma nova estancia da classe RandomNumberGenerator
             {
-                rng.GetBytes(randomNumber);
-                return Convert.ToBase64String(randomNumber);
+                rng.GetBytes(randomNumber); // Que preencher o array de byte[] randomNumber com numeros incriptografados 
+                return Convert.ToBase64String(randomNumber); // Que depois são convertidos para uma string com o metodo ToBase64String() que mexer com o decode Base64
             };
         }
 

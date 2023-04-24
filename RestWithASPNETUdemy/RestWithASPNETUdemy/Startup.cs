@@ -52,7 +52,7 @@ namespace RestWithASPNETUdemy
             .CreateLogger();
         }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // O metodo ConfigureServices() adicionar serviços na aplicaçãos 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
@@ -63,16 +63,14 @@ namespace RestWithASPNETUdemy
 
             new ConfigureFromConfigurationOptions<TokenConfiguration>(
                 Configuration.GetSection("TokenCofigurations")).Configure(tokenConfigurations);
-
+            
             services.AddSingleton(tokenConfigurations);
 
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-
-            .AddJwtBearer(options =>
+            }).AddJwtBearer(options =>
             {
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
@@ -99,7 +97,7 @@ namespace RestWithASPNETUdemy
                     .RequireAuthenticatedUser().Build());
             });
 
-            var connectionString = "Server=localhost;DataBase=rest_with_asp_net_udemy;Uid=root;Pwd=root;";
+            var connectionString = "Server=localhost;DataBase=rest_with_asp_net_udemy;Uid=root;Pwd=root";
             var serverVersion = new MySqlServerVersion(new Version(5, 7, 22));
 
             //if (Environment.IsDevelopment())
@@ -155,7 +153,7 @@ namespace RestWithASPNETUdemy
             services.AddScoped<ILoginBusiness, LoginBusinessImplementation>();
 
             services.AddTransient<ITokenService, TokenService>();
-
+            
             services.AddScoped<IUsersRepository, UsersRepository>();
             services.AddScoped<IPersonRepository, PersonRepository>();
             //services.AddScoped<IPersonRepository, PersonRepository>();
@@ -172,6 +170,7 @@ namespace RestWithASPNETUdemy
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // o metodo Configurar vai adicionar serviços a pipeline da aplicação que no caso funciona como um middleware;
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

@@ -15,7 +15,6 @@ namespace RestWithASPNETUdemy.Business.Implementations
     {
         private const string DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
         private TokenConfiguration _configuration;
-
         private IUsersRepository _repository;
         private readonly ITokenService _tokenService;
 

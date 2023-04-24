@@ -44,11 +44,7 @@ namespace RestWithASPNETUdemy.Repository
         {
             Byte[] inputBytes = Encoding.UTF8.GetBytes(input); // this line Byte[] inputBytes receive the password and return input to byte array.
             Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
-            return BitConverter.ToString(hashedBytes); // Converts base data types to an array of bytes
-          
-            //Console.WriteLine($"{hashedBytes}");
-            //Console.WriteLine($"{x}");
-            //var x = BitConverter.ToString(hashedBytes);
+            return BitConverter.ToString(hashedBytes); // a classe BitConverter Converte os dados em bytes para string  e em string para bytes (Dependendo do contexto)
         }
 
         public bool Exist(long id) => _context.Users.Any(p => p.Id.Equals(id));

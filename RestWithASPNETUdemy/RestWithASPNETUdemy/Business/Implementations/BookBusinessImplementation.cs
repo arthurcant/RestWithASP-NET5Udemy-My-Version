@@ -41,12 +41,12 @@ namespace RestWithASPNETUdemy.Business.Implementations
             var size = (pageSize < 1) ? 10 : pageSize;
             var offset = page > 0 ? (page - 1) * size : 0;
 
-            string query = @"select * from books b where 1 = 1";
+            string query = @"select * from book b where 1 = 1";
 
             if (!string.IsNullOrEmpty(title)) query += $"and b.title like '%{title}%' ";
             query += $" order by b.title {sort} limit {size} offset {offset}";
 
-            string countQuery = @"select count(*) from books b where 1 = 1";
+            string countQuery = @"select count(*) from book b where 1 = 1";
             if (!string.IsNullOrEmpty(title)) countQuery = countQuery + $" and b.title like '%{title}%' ";
 
             var books = _bookRepository.FindWithPagedSearch(query);

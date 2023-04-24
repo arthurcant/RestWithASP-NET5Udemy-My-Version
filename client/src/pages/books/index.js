@@ -32,24 +32,24 @@ export default function Book() {
     }
 
     async function deleteBook(id){
-    try {
-        api.delete(`/api/book/v1/${id}`, authorization);
+        try {
+            api.delete(`/api/book/v1/${id}`, authorization);
 
-        setBooks(books.filter(book => book.id !== id));
-    } catch (error) {
-        alert("Delete failed! Try again!")
-    }
+            setBooks(books.filter(book => book.id !== id));
+        } catch (error) {
+            alert("Delete failed! Try again!")
+        }
     }
 
     async function logout(id){
-    try {
-        api.delete(`/api/book/v1/revoke`, authorization);
-        
-        localStorage.clear();
-        history('/')
-    } catch (error) {
-        alert("logout failed.")
-    }
+        try {
+            api.delete(`/api/book/v1/revoke`, authorization);
+            
+            localStorage.clear();
+            history('/')
+        } catch (error) {
+            alert("logout failed.")
+        }
     }
 
     async function editBook(id){

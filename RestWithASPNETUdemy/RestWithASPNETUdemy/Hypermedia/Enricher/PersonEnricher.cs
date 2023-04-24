@@ -47,7 +47,9 @@ namespace RestWithASPNETUdemy.Hypermedia.Enricher
 
         private string GetLink(long id, IUrlHelper urlHelper, string path)
         {
-            lock (_lock)
+            lock (_lock) // A primeira linha da função usa o comando lock para garantir que
+                         // o bloco de código dentro do lock seja executado apenas por uma thread de cada vez,
+                         // evitando possíveis problemas de concorrência.
             {
                 var url = new { controller = path, id = id };
                 return new StringBuilder(urlHelper.Link("DefaultApi", url)).Replace("%2F", "/").ToString();
