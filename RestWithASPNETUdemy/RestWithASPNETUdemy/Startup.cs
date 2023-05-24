@@ -52,7 +52,7 @@ namespace RestWithASPNETUdemy
             .CreateLogger();
         }
 
-        // O metodo ConfigureServices() adicionar serviços na aplicaçãos 
+        // O metodo ConfigureServices() adicionar serviços na aplicação
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
@@ -113,6 +113,13 @@ namespace RestWithASPNETUdemy
                 .EnableDetailedErrors()
             );
 
+
+            var filterOptions = new HyperMediaFilterOptions();
+            filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
+            filterOptions.ContentResponseEnricherList.Add(new BookEnricher());
+
+            services.AddSingleton(filterOptions);
+
             services.AddMvc(options =>
             {
                 options.RespectBrowserAcceptHeader = true;
@@ -121,12 +128,6 @@ namespace RestWithASPNETUdemy
                 options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
             })
             .AddXmlSerializerFormatters();
-
-            var filterOptions = new HyperMediaFilterOptions();
-            filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
-            filterOptions.ContentResponseEnricherList.Add(new BookEnricher());
-
-            services.AddSingleton(filterOptions);
 
             services.AddSwaggerGen(c =>
             {
@@ -188,8 +189,7 @@ namespace RestWithASPNETUdemy
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json",
-                    "REST API's From 0 to Azure with ASP.NET Core 5 and Docker - v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1 Docs");
             });
 
             var option = new RewriteOptions();
@@ -201,8 +201,10 @@ namespace RestWithASPNETUdemy
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapControllerRoute("DefaultApi", "{controller=swagger}/index");
+                endpoints.MapControllerRoute("DefaultApi", "{controller=swagger}/index.html");
             });
+
+
         }
 
         private void MigrateDatabase(string connection)
