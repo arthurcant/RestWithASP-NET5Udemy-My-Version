@@ -102,7 +102,7 @@ namespace RestWithASPNETUdemy.Repository.Implementations
                 using (var command = connection.CreateCommand())
                 {
                     command.CommandText = countQuery;
-                    result = command.ExecuteScalar().ToString();
+                    result = command.ExecuteScalar().ToString(); // retorna a primeira coluna no resultado da query e ignora o resto.
                 }
             }
             return int.Parse(result);

@@ -31,7 +31,8 @@ namespace RestWithASPNETUdemy.Business.Implementations
                                                              // ta no servidor da azure também vai pegar tbm.
 
             if (fileType.ToLower() == ".pdf" || fileType.ToLower() == ".jpg" ||
-                fileType.ToLower() == ".png" || fileType.ToLower() == ".jpeg" || fileType.ToLower() == ".mp4")
+                fileType.ToLower() == ".png" || fileType.ToLower() == ".jpeg" || 
+                fileType.ToLower() == ".mp4" || fileType.ToLower() == ".json")
             {
                 var docName = Path.GetFileName(file.FileName);
                 if (file != null && file.Length > 0)
@@ -60,5 +61,20 @@ namespace RestWithASPNETUdemy.Business.Implementations
             return list;
         }
 
+        public void DeleteFile(string filename)
+        {
+            var caminho = Path.Combine(_basePath, filename);
+
+            try
+            {
+                File.Delete(caminho);
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+
+        }
     }
 }

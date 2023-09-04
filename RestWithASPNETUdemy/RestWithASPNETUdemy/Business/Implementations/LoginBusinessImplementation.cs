@@ -1,5 +1,6 @@
 ﻿using RestWithASPNETUdemy.Configurations;
 using RestWithASPNETUdemy.Data.VO;
+using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Repository;
 using RestWithASPNETUdemy.Services;
 using System;
@@ -8,6 +9,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace RestWithASPNETUdemy.Business.Implementations
 {
@@ -15,19 +18,21 @@ namespace RestWithASPNETUdemy.Business.Implementations
     {
         private const string DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
         private TokenConfiguration _configuration;
-        private IUsersRepository _repository;
+        private IUsersRepository _repositoryUser;
+        private IRepository<User> _repository;
         private readonly ITokenService _tokenService;
 
-        public LoginBusinessImplementation(TokenConfiguration configuration, IUsersRepository repository, ITokenService tokenService)
+        public LoginBusinessImplementation(TokenConfiguration configuration, IUsersRepository repository, ITokenService tokenService, IRepository<User> repository2)
         {
             _configuration = configuration;
-            _repository = repository;
+            _repositoryUser = repository;
             _tokenService = tokenService;
+            _repository = repository2;
         }
 
         public TokenVO ValidateCredentials(UserVO userCredentials)
         {
-            var user = _repository.ValidateCredentials(userCredentials);
+            var user = _repositoryUser.ValidateCredentials(userCredentials);
 
             if (user == null) return null;
 
@@ -44,7 +49,7 @@ namespace RestWithASPNETUdemy.Business.Implementations
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpiryTime = DateTime.Now.AddDays(_configuration.DaysToExpiry);
 
-            _repository.RefreshUserInfo(user);
+            _repositoryUser.RefreshUserInfo(user);
 
             DateTime createDate = DateTime.Now;
             DateTime expirationDate = createDate.AddMinutes(_configuration.Minutes);
@@ -67,7 +72,7 @@ namespace RestWithASPNETUdemy.Business.Implementations
 
             var username = principal.Identity.Name;
 
-            var user = _repository.ValidateCredentials(username);
+            var user = _repositoryUser.ValidateCredentials(username);
 
             if (user == null ||
                 user.RefreshToken != refreshToken) return null;
@@ -77,7 +82,7 @@ namespace RestWithASPNETUdemy.Business.Implementations
 
             user.RefreshToken = refreshToken;
 
-            _repository.RefreshUserInfo(user);
+            _repositoryUser.RefreshUserInfo(user);
 
             DateTime createDate = DateTime.Now;
             DateTime expirationDate = createDate.AddMinutes(_configuration.Minutes);
@@ -93,8 +98,32 @@ namespace RestWithASPNETUdemy.Business.Implementations
 
         public bool RevokeToken(string userName)
         {
-            return _repository.RevokeToken(userName);
+            return _repositoryUser.RevokeToken(userName);
         }
 
-    }
+        public User RegisterUser(UsuarioRegisterVO user)
+        {
+            User user1 = new User
+            {
+                FullName = user.NomeCompleto,
+                Password = ComputerHash(user.Senha, new SHA256CryptoServiceProvider()),
+                UserName = user.UserName,
+                RefreshToken = _tokenService.GenerateRefreshToken(),
+                RefreshTokenExpiryTime = DateTime.Now.AddDays(_configuration.DaysToExpiry)
+            };
+
+            var usuarioRegistrado = _repository.Create(user1);
+
+            if (usuarioRegistrado == null) return null;
+
+            return usuarioRegistrado;
+        }
+
+        public string ComputerHash(string input, SHA256CryptoServiceProvider algorithm)
+        {
+            Byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+            Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
+            return BitConverter.ToString(hashedBytes);
+        }
+}
 }

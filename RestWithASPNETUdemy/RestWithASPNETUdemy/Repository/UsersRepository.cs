@@ -40,7 +40,7 @@ namespace RestWithASPNETUdemy.Repository
         }
 
         // embarrassed the password in SHA256.
-        private string ComputerHash(string input, SHA256CryptoServiceProvider algorithm)
+        public string ComputerHash(string input, SHA256CryptoServiceProvider algorithm)
         {
             Byte[] inputBytes = Encoding.UTF8.GetBytes(input); // this line Byte[] inputBytes receive the password and return input to byte array.
             Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);

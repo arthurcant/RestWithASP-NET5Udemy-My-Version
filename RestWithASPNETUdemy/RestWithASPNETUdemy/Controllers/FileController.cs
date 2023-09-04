@@ -61,5 +61,16 @@ namespace RestWithASPNETUdemy.Controllers
             List<FileDetailVO> details = await _fileBusiness.SaveFilesToDisk(files);
             return new OkObjectResult(details);
         }
+
+        [HttpDelete("DeleteFile/{fileName}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        public IActionResult Delete(string fileName)
+        {
+            _fileBusiness.DeleteFile(fileName);
+            return NoContent();
+        }
+
     }
 }

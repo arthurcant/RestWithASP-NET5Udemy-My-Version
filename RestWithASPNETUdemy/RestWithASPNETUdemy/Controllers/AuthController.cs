@@ -40,6 +40,20 @@ namespace RestWithASPNETUdemy.Controllers
             return Ok(token);
         }
 
+        [HttpPost]
+        [Route("registe")]
+        public IActionResult Registe([FromBody] UsuarioRegisterVO user )
+        {
+            if (user == null) return BadRequest("Invalid register user");
+
+            var usuarioRegistrado = _loginBusiness.RegisterUser(user);
+
+            if (usuarioRegistrado == null) return BadRequest("The user was't registered with sucess.");
+            return Ok(usuarioRegistrado);
+
+        }
+
+
         [HttpGet]
         [Route("revoke")]
         [Authorize("Bearer")]

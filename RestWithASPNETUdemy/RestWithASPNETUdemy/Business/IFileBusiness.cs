@@ -11,5 +11,7 @@ namespace RestWithASPNETUdemy.Business
         public Task<FileDetailVO> SaveFileToDisk(IFormFile file);
         public Task<List<FileDetailVO>> SaveFilesToDisk(IList<IFormFile> files);
 
+        public void DeleteFile(string filename);
+
     }
 }
