@@ -29,6 +29,7 @@ namespace RestWithASPNETUdemy.Controllers
             return Ok(token);
         }
 
+        // refresh token é uma forma mais segura de enviar o refresh token para renovação de um novo token
         [HttpPost]
         [Route("refresh")]
         public IActionResult Refresh([FromBody] TokenVO tokenVo)

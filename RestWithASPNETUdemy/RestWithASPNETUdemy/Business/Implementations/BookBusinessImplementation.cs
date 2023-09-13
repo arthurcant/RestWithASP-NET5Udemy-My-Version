@@ -43,7 +43,7 @@ namespace RestWithASPNETUdemy.Business.Implementations
 
             string query = @"select * from book b where 1 = 1";
 
-            if (!string.IsNullOrEmpty(title)) query += $"and b.title like '%{title}%' ";
+            if (!string.IsNullOrEmpty(title)) query += $" and b.title like '%{title}%' ";
             query += $" order by b.title {sort} limit {size} offset {offset}";
 
             string countQuery = @"select count(*) from book b where 1 = 1";
