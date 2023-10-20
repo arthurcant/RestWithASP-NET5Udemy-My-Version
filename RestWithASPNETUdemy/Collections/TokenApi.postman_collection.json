@@ -2,11 +2,12 @@
 	"info": {
 		"_postman_id": "244c3d60-3556-4031-a98a-f9538cc91e61",
 		"name": "TokenApi",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17967844"
 	},
 	"item": [
 		{
-			"name": "Login",
+			"name": "{{baseUrl}}/api/auth/v{{version}}/signin",
 			"event": [
 				{
 					"listen": "test",
@@ -29,15 +30,13 @@
 				"header": [
 					{
 						"key": "Accept",
-						"value": "application/xml",
-						"type": "text",
-						"disabled": true
+						"value": "application/json",
+						"type": "text"
 					},
 					{
 						"key": "Authorization",
 						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzMDk2OGE3ZS0wMGJjLTQxNTgtODRiOS1kOTMwYjE0YTAwNTciLCJ1bmlxdWVfbmFtZSI6ImxlYW5kcm8iLCJleHAiOjE2NTI3MjIxNjAsImlzcyI6IkV4YW1wbGVBdWRpZW5jZSIsImF1ZCI6IkV4YW1wbGVJc3N1ZXIifQ.nCkFjck_WT7dLDqPVTstc51nKw7mhIOX3Nj7sqBI59o",
-						"type": "text",
-						"disabled": true
+						"type": "text"
 					}
 				],
 				"body": {
@@ -50,7 +49,123 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/api/auth/v{{version}}/signin",
+					"raw": "{{baseUrl}}/api/auth/v1/signin",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"v1",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/api/auth/v{{version}}/signin Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(responseCode.code >= 200 && responseCode.code <= 299) {\r",
+							"    var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"    postman.setEnvironmentVariable('accessToken', jsonData.accessToken);    \r",
+							"\r",
+							"    postman.setEnvironmentVariable('refreshToken', jsonData.refreshToken);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzMDk2OGE3ZS0wMGJjLTQxNTgtODRiOS1kOTMwYjE0YTAwNTciLCJ1bmlxdWVfbmFtZSI6ImxlYW5kcm8iLCJleHAiOjE2NTI3MjIxNjAsImlzcyI6IkV4YW1wbGVBdWRpZW5jZSIsImF1ZCI6IkV4YW1wbGVJc3N1ZXIifQ.nCkFjck_WT7dLDqPVTstc51nKw7mhIOX3Nj7sqBI59o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"string\",\n  \"nomeCompleto\": \"string\",\n  \"senha\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/auth/v1/registe",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"auth",
+						"v1",
+						"registe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/api/auth/v{{version}}/refresh",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(responseCode.code >= 200 && responseCode.code <= 299) {\r",
+							"    var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"    postman.setEnvironmentVariable('accessToken', jsonData.accessToken);    \r",
+							"\r",
+							"    postman.setEnvironmentVariable('refreshToken', jsonData.refreshToken);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzMDk2OGE3ZS0wMGJjLTQxNTgtODRiOS1kOTMwYjE0YTAwNTciLCJ1bmlxdWVfbmFtZSI6ImxlYW5kcm8iLCJleHAiOjE2NTI3MjIxNjAsImlzcyI6IkV4YW1wbGVBdWRpZW5jZSIsImF1ZCI6IkV4YW1wbGVJc3N1ZXIifQ.nCkFjck_WT7dLDqPVTstc51nKw7mhIOX3Nj7sqBI59o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlODVkMzUzMy0xMTUwLTQyZmItOTE2Yi01NzcxZmEyNTI2YzciLCJ1bmlxdWVfbmFtZSI6ImxlYW5kcm8iLCJleHAiOjE2OTc2NTY0OTksImlzcyI6IkV4ZW1wbGVJc3N1ZXIiLCJhdWQiOiJFeGVtcGxlQXVkaWVuY2UifQ.wumjFEh-vFQR8Wt1d7AuP3hSq2lPKEL-SOQPSLF9fk0\",\n    \"refreshToken\": \"sC8buSSfGKMKu2TyvOv9pWrLzr2d+1+YUmsT8nnljGA=\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/auth/v{{version}}/refresh",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -58,7 +173,67 @@
 						"api",
 						"auth",
 						"v{{version}}",
-						"signin"
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/api/auth/v{{version}}/revoke",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(responseCode.code >= 200 && responseCode.code <= 299) {\r",
+							"    var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"    postman.setEnvironmentVariable('accessToken', jsonData.accessToken);    \r",
+							"\r",
+							"    postman.setEnvironmentVariable('refreshToken', jsonData.refreshToken);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0NGVjNmYwYS1iMTI5LTQ5YjQtODFlNC1jYzQ4ZDI0NzdlN2EiLCJ1bmlxdWVfbmFtZSI6ImxlYW5kcm8iLCJleHAiOjE2ODEyNDkyNjYsImlzcyI6IkV4ZW1wbGVJc3N1ZXIiLCJhdWQiOiJFeGVtcGxlQXVkaWVuY2UifQ.ZO2cUsDhtYbJytctbhfvm5cGCdJ8o-IYkSHCkKIILUw\",\n    \"refreshToken\": \"4QyRbwrXEelLXJiw4k6Xcjx2xFUdILLtLF4gIl9WYcM=\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/auth/v{{version}}/revoke",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"v{{version}}",
+						"revoke"
 					]
 				}
 			},
